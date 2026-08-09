@@ -1,0 +1,477 @@
+/**
+ * Restaurant Menu Builder — frontend styles.
+ *
+ * Everything is scoped under .rmb-menu. No generic element is styled globally.
+ * All colours and sizes come from CSS custom properties written by the plugin
+ * onto the wrapper, so the Style editor changes take effect without a rebuild.
+ */
+
+.rmb-menu {
+	--rmb-primary: #1f2933;
+	--rmb-accent: #a63d40;
+	--rmb-text: #22282e;
+	--rmb-text-secondary: #5c6670;
+	--rmb-background: #ffffff;
+	--rmb-border: #e3e1dc;
+	--rmb-category-active: #1f2933;
+	--rmb-font: inherit;
+	--rmb-size-heading: 30px;
+	--rmb-size-body: 15px;
+	--rmb-size-category: 14px;
+	--rmb-size-price: 16px;
+	--rmb-gap: 28px;
+	--rmb-radius: 10px;
+
+	box-sizing: border-box;
+	background: var(--rmb-background);
+	color: var(--rmb-text);
+	font-family: var(--rmb-font);
+	font-size: var(--rmb-size-body);
+	line-height: 1.55;
+	max-width: 100%;
+	overflow-wrap: break-word;
+}
+
+.rmb-menu *,
+.rmb-menu *::before,
+.rmb-menu *::after {
+	box-sizing: inherit;
+}
+
+/* ---------------------------------------------------------------- Navigation */
+
+.rmb-menu .rmb-nav {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	background: var(--rmb-background);
+	border-bottom: 1px solid var(--rmb-border);
+	margin-bottom: var(--rmb-gap);
+	padding: 10px 0;
+}
+
+.rmb-menu .rmb-nav-list {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 6px;
+	list-style: none;
+	margin: 0;
+	padding: 2px 2px 6px;
+	overflow-x: auto;
+	scrollbar-width: thin;
+	-webkit-overflow-scrolling: touch;
+}
+
+.rmb-menu .rmb-nav-item {
+	margin: 0;
+	flex: 0 0 auto;
+}
+
+/* Icon above the label, so a category reads at a glance the way a printed menu
+   header does. Categories without an icon simply show the label. */
+.rmb-menu .rmb-nav-link {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 6px;
+	padding: 10px 18px 8px;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	border-radius: var(--rmb-radius) var(--rmb-radius) 0 0;
+	color: var(--rmb-text-secondary);
+	font-size: var(--rmb-size-category);
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.rmb-menu .rmb-nav-link .rmb-icon {
+	flex: 0 0 auto;
+	width: 28px;
+	height: 28px;
+	padding: 4px;
+	border: 1px solid var(--rmb-border);
+	border-radius: 50%;
+	box-sizing: content-box;
+	transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.rmb-menu .rmb-nav-link:hover,
+.rmb-menu .rmb-nav-link:focus-visible {
+	color: var(--rmb-primary);
+}
+
+.rmb-menu .rmb-nav-link:hover .rmb-icon,
+.rmb-menu .rmb-nav-link:focus-visible .rmb-icon {
+	border-color: var(--rmb-category-active);
+}
+
+.rmb-menu .rmb-nav-link.is-active {
+	border-bottom-color: var(--rmb-accent);
+	color: var(--rmb-category-active);
+	font-weight: 700;
+}
+
+.rmb-menu .rmb-nav-link.is-active .rmb-icon {
+	background: var(--rmb-background);
+	border-color: var(--rmb-accent);
+	color: var(--rmb-accent);
+}
+
+/* State is never signalled by colour alone: the active item also keeps a solid
+   underline and a bold label. */
+.rmb-menu .rmb-nav-link:focus-visible {
+	outline: 2px solid var(--rmb-accent);
+	outline-offset: 2px;
+}
+
+.rmb-menu .rmb-icon {
+	flex: 0 0 auto;
+}
+
+/* ------------------------------------------------------------------ Sections */
+
+.rmb-menu .rmb-sections {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--rmb-gap) * 1.6);
+}
+
+.rmb-menu .rmb-section {
+	scroll-margin-top: 90px;
+}
+
+.rmb-menu .rmb-section-header {
+	margin-bottom: calc(var(--rmb-gap) * 0.8);
+	text-align: center;
+}
+
+.rmb-menu .rmb-section-media {
+	margin: 0 auto 14px;
+	max-width: 220px;
+}
+
+.rmb-menu .rmb-category-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: var(--rmb-radius);
+}
+
+.rmb-menu .rmb-section-title {
+	color: var(--rmb-primary);
+	font-family: inherit;
+	font-size: var(--rmb-size-heading);
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	line-height: 1.2;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+/* The rule under the title is the one decorative flourish; it also separates
+   the optional tagline from the items without adding another element. */
+.rmb-menu .rmb-section-title::after {
+	content: "";
+	display: block;
+	width: 46px;
+	height: 2px;
+	margin: 12px auto 0;
+	background: var(--rmb-accent);
+}
+
+.rmb-menu .rmb-section-note {
+	color: var(--rmb-text-secondary);
+	font-size: calc(var(--rmb-size-body) * 0.92);
+	font-style: italic;
+	letter-spacing: 0.04em;
+	margin: 10px 0 0;
+}
+
+.rmb-menu .rmb-section-empty {
+	color: var(--rmb-text-secondary);
+	font-style: italic;
+	margin: 0;
+	text-align: center;
+}
+
+/* --------------------------------------------------------------------- Items */
+
+.rmb-menu .rmb-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.rmb-menu .rmb-item {
+	margin: 0;
+}
+
+.rmb-menu .rmb-item-body {
+	min-width: 0;
+	flex: 1 1 auto;
+}
+
+.rmb-menu .rmb-item-head {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+.rmb-menu .rmb-item-name {
+	color: var(--rmb-primary);
+	font-family: inherit;
+	font-size: calc(var(--rmb-size-body) * 1.12);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	margin: 0;
+	line-height: 1.35;
+}
+
+/* Signature: the dotted leader that ties a dish to its price. */
+.rmb-menu .rmb-leader {
+	flex: 1 1 auto;
+	min-width: 18px;
+	align-self: flex-end;
+	height: 1px;
+	margin-bottom: 5px;
+	background-image: radial-gradient(circle, var(--rmb-border) 1px, transparent 1px);
+	background-position: bottom;
+	background-size: 6px 2px;
+	background-repeat: repeat-x;
+}
+
+.rmb-menu .rmb-badge {
+	display: inline-block;
+	margin-left: 8px;
+	padding: 2px 8px;
+	border: 1px solid var(--rmb-border);
+	border-radius: 999px;
+	color: var(--rmb-text-secondary);
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.rmb-menu .rmb-item-description {
+	color: var(--rmb-text-secondary);
+	font-size: calc(var(--rmb-size-body) * 0.95);
+	font-style: italic;
+	margin: 5px 0 0;
+	max-width: 62ch;
+}
+
+.rmb-menu .rmb-price {
+	color: var(--rmb-primary);
+	font-size: var(--rmb-size-price);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.rmb-menu .rmb-price-was {
+	color: var(--rmb-text-secondary);
+	font-weight: 400;
+	opacity: 0.8;
+}
+
+.rmb-menu .rmb-prices {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 22px;
+	list-style: none;
+	margin: 8px 0 0;
+	padding: 0;
+}
+
+.rmb-menu .rmb-price-variation {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 8px;
+	margin: 0;
+}
+
+.rmb-menu .rmb-price-label {
+	color: var(--rmb-text-secondary);
+	font-size: calc(var(--rmb-size-body) * 0.85);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.rmb-menu .rmb-price-value {
+	color: var(--rmb-primary);
+	font-size: var(--rmb-size-price);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+
+.rmb-menu .rmb-item-media {
+	flex: 0 0 auto;
+}
+
+.rmb-menu .rmb-item-image {
+	display: block;
+	height: auto;
+	border-radius: var(--rmb-radius);
+	object-fit: cover;
+}
+
+/* ----------------------------------------------------------- Layout: classic */
+
+.rmb-menu .rmb-items-classic {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.rmb-menu .rmb-items-classic .rmb-item {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.rmb-menu .rmb-items-classic .rmb-item-media {
+	width: 92px;
+}
+
+.rmb-menu .rmb-items-classic .rmb-item-image {
+	width: 92px;
+	height: 92px;
+}
+
+/* -------------------------------------------------------------- Layout: card */
+
+.rmb-menu .rmb-items-card {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: 22px;
+}
+
+.rmb-menu .rmb-items-card .rmb-item {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--rmb-border);
+	border-radius: var(--rmb-radius);
+	overflow: hidden;
+}
+
+.rmb-menu .rmb-items-card .rmb-item-media {
+	width: 100%;
+}
+
+.rmb-menu .rmb-items-card .rmb-item-image {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	border-radius: 0;
+}
+
+.rmb-menu .rmb-items-card .rmb-item-body {
+	padding: 16px;
+}
+
+.rmb-menu .rmb-items-card .rmb-item-head {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+}
+
+.rmb-menu .rmb-items-card .rmb-leader {
+	display: none;
+}
+
+.rmb-menu .rmb-items-card .rmb-price {
+	margin-top: 6px;
+}
+
+/* -------------------------------------------------------- Layout: two column */
+
+.rmb-menu .rmb-items-two-column {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px 44px;
+}
+
+.rmb-menu .rmb-items-two-column .rmb-item {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+}
+
+.rmb-menu .rmb-items-two-column .rmb-item-media {
+	width: 62px;
+}
+
+.rmb-menu .rmb-items-two-column .rmb-item-image {
+	width: 62px;
+	height: 62px;
+}
+
+/* ------------------------------------------------------------------- Notices */
+
+.rmb-notice {
+	border: 1px dashed #c8ccd1;
+	border-radius: 8px;
+	color: #50575e;
+	font-size: 14px;
+	padding: 14px 16px;
+}
+
+/* --------------------------------------------------------- Accessibility, RM */
+
+.rmb-menu a:focus-visible,
+.rmb-menu button:focus-visible {
+	outline: 2px solid var(--rmb-accent);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.rmb-menu .rmb-nav-link {
+		transition: none;
+	}
+}
+
+/* ----------------------------------------------------------------- Responsive */
+
+@media (max-width: 782px) {
+	.rmb-menu {
+		--rmb-gap: 22px;
+	}
+
+	.rmb-menu .rmb-items-two-column {
+		grid-template-columns: minmax(0, 1fr);
+		gap: 18px;
+	}
+}
+
+@media (max-width: 480px) {
+	.rmb-menu .rmb-section-title {
+		font-size: calc(var(--rmb-size-heading) * 0.78);
+	}
+
+	.rmb-menu .rmb-items-classic .rmb-item-media,
+	.rmb-menu .rmb-items-classic .rmb-item-image {
+		width: 70px;
+	}
+
+	.rmb-menu .rmb-items-classic .rmb-item-image {
+		height: 70px;
+	}
+
+	.rmb-menu .rmb-items-card {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.rmb-menu .rmb-item-head {
+		flex-wrap: wrap;
+	}
+
+	.rmb-menu .rmb-leader {
+		min-width: 12px;
+	}
+}

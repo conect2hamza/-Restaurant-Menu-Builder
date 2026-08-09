@@ -1,0 +1,1681 @@
+# Copyright (C) 2025 Hamza Dezinr
+# This file is distributed under the GPL-2.0-or-later license.
+msgid ""
+msgstr ""
+"Project-Id-Version: Restaurant Menu Builder 1.1.0\n"
+"Report-Msgid-Bugs-To: https://hamzadezinr.com/support\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-01T00:00:00+00:00\n"
+"X-Generator: bin/makepot.py\n"
+"X-Domain: restaurant-menu-builder\n"
+
+#: admin/class-admin.php:65 admin/class-admin.php:66
+msgid "Restaurant Menu"
+msgstr ""
+
+#: admin/class-admin.php:76 admin/class-admin.php:77
+msgid "Dashboard"
+msgstr ""
+
+#: admin/class-admin.php:85 admin/class-admin.php:86
+msgid "All Menus"
+msgstr ""
+
+#: admin/class-admin.php:94
+msgid "Add New Menu"
+msgstr ""
+
+#: admin/class-admin.php:95
+msgid "Add New"
+msgstr ""
+
+#: admin/class-admin.php:103 admin/class-admin.php:104 admin/js/screens.js:1005 admin/views/categories.php:23 admin/views/menu-editor.php:61
+msgid "Categories"
+msgstr ""
+
+#: admin/class-admin.php:112 admin/class-admin.php:113 admin/js/screens.js:1004
+msgid "Items"
+msgstr ""
+
+#: admin/class-admin.php:121 admin/class-admin.php:122 admin/views/menu-editor.php:55 admin/views/menu-editor.php:75 admin/views/style.php:22
+msgid "Style"
+msgstr ""
+
+#: admin/class-admin.php:130 admin/class-admin.php:131 admin/views/settings.php:27
+msgid "Settings"
+msgstr ""
+
+#: admin/class-admin.php:139 admin/class-admin.php:140 admin/views/help.php:23
+msgid "Help"
+msgstr ""
+
+#: admin/class-admin.php:259
+msgid "Primary"
+msgstr ""
+
+#: admin/class-admin.php:261
+msgid "Section titles and item names."
+msgstr ""
+
+#: admin/class-admin.php:265
+msgid "Accent"
+msgstr ""
+
+#: admin/class-admin.php:267
+msgid "Rules, focus outlines and highlights."
+msgstr ""
+
+#: admin/class-admin.php:271
+msgid "Text"
+msgstr ""
+
+#: admin/class-admin.php:277
+msgid "Secondary text"
+msgstr ""
+
+#: admin/class-admin.php:279
+msgid "Descriptions and price labels."
+msgstr ""
+
+#: admin/class-admin.php:283
+msgid "Background"
+msgstr ""
+
+#: admin/class-admin.php:289
+msgid "Border"
+msgstr ""
+
+#: admin/class-admin.php:291
+msgid "Category pills, cards and the dotted price leader."
+msgstr ""
+
+#: admin/class-admin.php:295
+msgid "Active category"
+msgstr ""
+
+#: admin/class-admin.php:297
+msgid "Fill of the selected category pill."
+msgstr ""
+
+#: admin/class-admin.php:301
+msgid "Category heading size"
+msgstr ""
+
+#: admin/class-admin.php:303
+msgid "Use a CSS length, for example 30px or 2rem."
+msgstr ""
+
+#: admin/class-admin.php:307
+msgid "Body size"
+msgstr ""
+
+#: admin/class-admin.php:313
+msgid "Category navigation size"
+msgstr ""
+
+#: admin/class-admin.php:319
+msgid "Price size"
+msgstr ""
+
+#: admin/class-admin.php:449 includes/class-rest-api.php:53
+msgid "You do not have permission to manage restaurant menus."
+msgstr ""
+
+#: admin/class-admin.php:507
+msgid "Restaurant Menu Builder could not find its database tables. Deactivate and reactivate the plugin to create them."
+msgstr ""
+
+#: admin/class-admin.php:522
+msgid "Menus"
+msgstr ""
+
+#: admin/class-admin.php:570 admin/js/screens.js:1002
+msgid "Menu"
+msgstr ""
+
+#: admin/class-admin.php:583
+msgid "Switch menu"
+msgstr ""
+
+#: admin/class-admin.php:594
+msgid "No menus yet"
+msgstr ""
+
+#: admin/class-admin.php:595
+msgid "Create your first menu, then add categories and dishes to it."
+msgstr ""
+
+#: admin/class-admin.php:599
+msgid "Create a menu"
+msgstr ""
+
+#: admin/js/admin.js:103 admin/js/admin.js:148
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: admin/js/admin.js:129
+msgid "Dismiss"
+msgstr ""
+
+#: admin/js/admin.js:162
+msgid "Save"
+msgstr ""
+
+#: admin/js/admin.js:171
+msgid "Close"
+msgstr ""
+
+#: admin/js/admin.js:180
+msgid "Cancel"
+msgstr ""
+
+#: admin/js/admin.js:289
+msgid "Confirm"
+msgstr ""
+
+#: admin/js/admin.js:472
+msgid "Search icons…"
+msgstr ""
+
+#: admin/js/admin.js:473
+msgid "Search icons"
+msgstr ""
+
+#: admin/js/admin.js:477
+msgid "No icon matches that search."
+msgstr ""
+
+#: admin/js/admin.js:485
+msgid "No icon"
+msgstr ""
+
+#: admin/js/admin.js:574
+msgid "Clear"
+msgstr ""
+
+#: admin/js/admin.js:606
+msgid "Remove"
+msgstr ""
+
+#: admin/js/admin.js:617 admin/js/admin.js:654
+msgid "Choose image"
+msgstr ""
+
+#: admin/js/admin.js:620
+msgid "The media library is unavailable on this screen."
+msgstr ""
+
+#: admin/js/admin.js:625
+msgid "Choose an image"
+msgstr ""
+
+#: admin/js/admin.js:626
+msgid "Use this image"
+msgstr ""
+
+#: admin/js/admin.js:650
+msgid "Change image"
+msgstr ""
+
+#: admin/js/screens.js:33 admin/js/screens.js:129 admin/js/screens.js:323 admin/js/screens.js:880 admin/js/screens.js:1129 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:44
+msgid "Active"
+msgstr ""
+
+#: admin/js/screens.js:33 admin/js/screens.js:881 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:45
+msgid "Draft"
+msgstr ""
+
+#: admin/js/screens.js:43
+msgid "Drag to reorder"
+msgstr ""
+
+#: admin/js/screens.js:57
+msgid "Move %s up"
+msgstr ""
+
+#: admin/js/screens.js:67
+msgid "Move %s down"
+msgstr ""
+
+#: admin/js/screens.js:117
+msgid "Starters"
+msgstr ""
+
+#: admin/js/screens.js:121
+msgid "Shown under the category title"
+msgstr ""
+
+#: admin/js/screens.js:130 admin/js/screens.js:324 admin/js/screens.js:1130
+msgid "Draft — hidden from visitors"
+msgstr ""
+
+#: admin/js/screens.js:136 admin/js/screens.js:330
+msgid "Name"
+msgstr ""
+
+#: admin/js/screens.js:137 admin/js/screens.js:331
+msgid "Description"
+msgstr ""
+
+#: admin/js/screens.js:139
+msgid "Icon"
+msgstr ""
+
+#: admin/js/screens.js:143
+msgid "Shown beside the category in the menu navigation. Search by name, or clear it to use no icon."
+msgstr ""
+
+#: admin/js/screens.js:147 admin/js/screens.js:334
+msgid "Image"
+msgstr ""
+
+#: admin/js/screens.js:150 admin/js/screens.js:341 admin/js/screens.js:822 admin/js/screens.js:1006 admin/js/screens.js:1162
+msgid "Status"
+msgstr ""
+
+#: admin/js/screens.js:154 admin/js/screens.js:155 admin/views/categories.php:42 admin/views/menu-editor.php:64
+msgid "Add category"
+msgstr ""
+
+#: admin/js/screens.js:154 admin/js/screens.js:538
+msgid "Edit category"
+msgstr ""
+
+#: admin/js/screens.js:155
+msgid "Save category"
+msgstr ""
+
+#: admin/js/screens.js:161 includes/class-category.php:121 includes/class-category.php:168
+msgid "Enter a category name."
+msgstr ""
+
+#: admin/js/screens.js:192 admin/js/screens.js:299
+msgid "Small"
+msgstr ""
+
+#: admin/js/screens.js:194
+msgid "Sale"
+msgstr ""
+
+#: admin/js/screens.js:203
+msgid "Remove this size"
+msgstr ""
+
+#: admin/js/screens.js:238
+msgid "Margherita"
+msgstr ""
+
+#: admin/js/screens.js:243
+msgid "Tomato, mozzarella, basil"
+msgstr ""
+
+#: admin/js/screens.js:255
+msgid "2 pcs"
+msgstr ""
+
+#: admin/js/screens.js:259
+msgid "One price"
+msgstr ""
+
+#: admin/js/screens.js:260
+msgid "Several sizes"
+msgstr ""
+
+#: admin/js/screens.js:269 admin/js/screens.js:305
+msgid "Price"
+msgstr ""
+
+#: admin/js/screens.js:271 admin/js/screens.js:306
+msgid "Sale price"
+msgstr ""
+
+#: admin/js/screens.js:273
+msgid "Leave empty unless the dish is discounted. It must be lower than the price."
+msgstr ""
+
+#: admin/js/screens.js:281
+msgid "Add a size"
+msgstr ""
+
+#: admin/js/screens.js:304
+msgid "Size"
+msgstr ""
+
+#: admin/js/screens.js:332
+msgid "Category"
+msgstr ""
+
+#: admin/js/screens.js:337
+msgid "Pricing"
+msgstr ""
+
+#: admin/js/screens.js:340
+msgid "Badge"
+msgstr ""
+
+#: admin/js/screens.js:340
+msgid "A short note beside the name, such as a portion size."
+msgstr ""
+
+#: admin/js/screens.js:347 admin/js/screens.js:348 admin/js/screens.js:535 admin/views/items.php:53
+msgid "Add item"
+msgstr ""
+
+#: admin/js/screens.js:347 admin/js/screens.js:434
+msgid "Edit item"
+msgstr ""
+
+#: admin/js/screens.js:348
+msgid "Save item"
+msgstr ""
+
+#: admin/js/screens.js:354 includes/class-item.php:206 includes/class-item.php:276
+msgid "Enter an item name."
+msgstr ""
+
+#: admin/js/screens.js:437
+msgid "Duplicate item"
+msgstr ""
+
+#: admin/js/screens.js:447 admin/js/screens.js:452
+msgid "Delete item"
+msgstr ""
+
+#: admin/js/screens.js:450
+msgid "Delete this item?"
+msgstr ""
+
+#: admin/js/screens.js:451
+msgid "“%s” will be removed from the menu."
+msgstr ""
+
+#: admin/js/screens.js:479 frontend/templates/category.php:50
+msgid "No items in this category yet."
+msgstr ""
+
+#. translators: %d: number of items.
+#: admin/js/screens.js:515
+msgid "%d items"
+msgstr ""
+
+#: admin/js/screens.js:541
+msgid "Duplicate category"
+msgstr ""
+
+#: admin/js/screens.js:551 admin/js/screens.js:565
+msgid "Delete category"
+msgstr ""
+
+#: admin/js/screens.js:554
+msgid "Delete this category?"
+msgstr ""
+
+#. translators: %s: category name.
+#: admin/js/screens.js:557
+msgid "“%s” and everything inside it will be removed."
+msgstr ""
+
+#. translators: %d: number of items.
+#: admin/js/screens.js:562
+msgid "%d items will be deleted with it."
+msgstr ""
+
+#: admin/js/screens.js:597
+msgid "No categories yet"
+msgstr ""
+
+#: admin/js/screens.js:598
+msgid "Categories are the sections of your menu, such as Starters or Drinks."
+msgstr ""
+
+#: admin/js/screens.js:599
+msgid "Add your first category"
+msgstr ""
+
+#: admin/js/screens.js:663
+msgid "Add a category before adding items."
+msgstr ""
+
+#: admin/js/screens.js:693
+msgid "Use a hex colour such as #1f2933."
+msgstr ""
+
+#: admin/js/screens.js:735
+msgid "Font"
+msgstr ""
+
+#: admin/js/screens.js:808
+msgid "Main menu"
+msgstr ""
+
+#: admin/js/screens.js:811
+msgid "Draft — build it privately first"
+msgstr ""
+
+#: admin/js/screens.js:812
+msgid "Active — visible wherever the shortcode is placed"
+msgstr ""
+
+#: admin/js/screens.js:818
+msgid "Add a menu"
+msgstr ""
+
+#: admin/js/screens.js:819
+msgid "Create menu"
+msgstr ""
+
+#: admin/js/screens.js:821 admin/js/screens.js:1158
+msgid "Menu name"
+msgstr ""
+
+#: admin/js/screens.js:828 includes/class-menu.php:198 includes/class-menu.php:253
+msgid "Enter a menu name."
+msgstr ""
+
+#: admin/js/screens.js:871 admin/views/dashboard.php:183
+msgid "Copy shortcode"
+msgstr ""
+
+#: admin/js/screens.js:887
+msgid "Status of %s"
+msgstr ""
+
+#: admin/js/screens.js:919
+msgid "Edit %s"
+msgstr ""
+
+#: admin/js/screens.js:920
+msgid "Edit menu"
+msgstr ""
+
+#: admin/js/screens.js:924
+msgid "Duplicate menu"
+msgstr ""
+
+#: admin/js/screens.js:934 admin/js/screens.js:949
+msgid "Delete menu"
+msgstr ""
+
+#: admin/js/screens.js:937
+msgid "Delete this menu?"
+msgstr ""
+
+#. translators: %s: menu name.
+#: admin/js/screens.js:940
+msgid "“%s” will be removed permanently."
+msgstr ""
+
+#. translators: 1: category count, 2: item count.
+#: admin/js/screens.js:945
+msgid "%1$d categories and %2$d items will be deleted with it."
+msgstr ""
+
+#: admin/js/screens.js:988
+msgid "No menus found"
+msgstr ""
+
+#: admin/js/screens.js:989
+msgid "Create a menu to start adding categories and dishes."
+msgstr ""
+
+#: admin/js/screens.js:990 admin/views/menus.php:51
+msgid "Add new menu"
+msgstr ""
+
+#: admin/js/screens.js:1003
+msgid "Shortcode"
+msgstr ""
+
+#: admin/js/screens.js:1007
+msgid "Actions"
+msgstr ""
+
+#: admin/js/screens.js:1053
+msgid "Shortcode copied."
+msgstr ""
+
+#: admin/js/screens.js:1056 admin/js/screens.js:1062
+msgid "Copy the shortcode manually: "
+msgstr ""
+
+#: admin/js/screens.js:1142 admin/views/settings.php:104
+msgid "Show category navigation"
+msgstr ""
+
+#: admin/js/screens.js:1143 admin/views/settings.php:105
+msgid "Show images"
+msgstr ""
+
+#: admin/js/screens.js:1144 admin/views/settings.php:106
+msgid "Show descriptions"
+msgstr ""
+
+#: admin/js/screens.js:1145 admin/views/settings.php:107
+msgid "Show prices"
+msgstr ""
+
+#: admin/js/screens.js:1160
+msgid "Slug"
+msgstr ""
+
+#: admin/js/screens.js:1160
+msgid "Used by [restaurant_menu slug=\"…\"]."
+msgstr ""
+
+#: admin/js/screens.js:1163 admin/views/settings.php:92
+msgid "Layout"
+msgstr ""
+
+#: admin/js/screens.js:1170
+msgid "Custom CSS for this menu"
+msgstr ""
+
+#: admin/js/screens.js:1172
+msgid "Applies to this menu only."
+msgstr ""
+
+#: admin/js/screens.js:1181
+msgid "Use the global style from Restaurant Menu → Style"
+msgstr ""
+
+#: admin/js/screens.js:1266
+msgid "Show preview"
+msgstr ""
+
+#: admin/js/screens.js:1267 admin/views/menu-editor.php:43
+msgid "Hide preview"
+msgstr ""
+
+#: admin/js/screens.js:1414
+msgid "Restore the default style?"
+msgstr ""
+
+#: admin/js/screens.js:1415
+msgid "Colours, sizes and the font go back to the plugin defaults."
+msgstr ""
+
+#: admin/js/screens.js:1416 admin/js/screens.js:1482 admin/views/style.php:32
+msgid "Restore defaults"
+msgstr ""
+
+#: admin/js/screens.js:1479
+msgid "Restore default settings?"
+msgstr ""
+
+#: admin/js/screens.js:1480
+msgid "Currency, display options and custom CSS go back to their defaults."
+msgstr ""
+
+#: admin/js/screens.js:1481
+msgid "Your menus, categories and items are not touched."
+msgstr ""
+
+#: admin/views/categories.php:24
+msgid "Group dishes into the sections diners see on the menu."
+msgstr ""
+
+#: admin/views/categories.php:48 admin/views/menu-editor.php:67
+msgid "Drag a category to reorder it, or use the arrow buttons."
+msgstr ""
+
+#: admin/views/categories.php:50 admin/views/menu-editor.php:69
+msgid "Loading categories…"
+msgstr ""
+
+#: admin/views/dashboard.php:33
+msgid "Total menus"
+msgstr ""
+
+#: admin/views/dashboard.php:36
+msgid "Across every status"
+msgstr ""
+
+#: admin/views/dashboard.php:40
+msgid "Total categories"
+msgstr ""
+
+#: admin/views/dashboard.php:43
+msgid "Sections diners can jump to"
+msgstr ""
+
+#: admin/views/dashboard.php:47
+msgid "Total items"
+msgstr ""
+
+#: admin/views/dashboard.php:50
+msgid "Dishes and drinks on the menus"
+msgstr ""
+
+#: admin/views/dashboard.php:54
+msgid "Shortcode in use"
+msgstr ""
+
+#: admin/views/dashboard.php:57
+msgid "Posts and pages embedding a menu"
+msgstr ""
+
+#: admin/views/dashboard.php:78
+msgid "Restaurant Menu Builder"
+msgstr ""
+
+#: admin/views/dashboard.php:79
+msgid "An overview of your menus, and the quickest way back into the work."
+msgstr ""
+
+#: admin/views/dashboard.php:105
+msgid "Recently updated menus"
+msgstr ""
+
+#: admin/views/dashboard.php:107
+msgid "View all"
+msgstr ""
+
+#: admin/views/dashboard.php:112
+msgid "No menus yet. Create your first one to get started."
+msgstr ""
+
+#: admin/views/dashboard.php:114
+msgid "Create your first menu"
+msgstr ""
+
+#. translators: 1: category count, 2: item count, 3: human readable time difference.
+#: admin/views/dashboard.php:130
+msgid "%1$d categories · %2$d items · updated %3$s ago"
+msgstr ""
+
+#: admin/views/dashboard.php:145
+msgid "Quick actions"
+msgstr ""
+
+#: admin/views/dashboard.php:148
+msgid "Create new menu"
+msgstr ""
+
+#: admin/views/dashboard.php:151
+msgid "Manage categories"
+msgstr ""
+
+#: admin/views/dashboard.php:154
+msgid "Manage items"
+msgstr ""
+
+#: admin/views/dashboard.php:157
+msgid "Open the style editor"
+msgstr ""
+
+#: admin/views/dashboard.php:163
+msgid "Publish a menu"
+msgstr ""
+
+#: admin/views/dashboard.php:166
+msgid "Once you have a menu, its shortcode appears here ready to copy."
+msgstr ""
+
+#. translators: %s: menu name.
+#: admin/views/dashboard.php:172
+msgid "Paste this anywhere to show %s."
+msgstr ""
+
+#: admin/views/dashboard.php:187
+msgid "It works in the block editor, the classic editor, Elementor and theme widgets."
+msgstr ""
+
+#: admin/views/dashboard.php:193
+msgid "Read the shortcode guide"
+msgstr ""
+
+#: admin/views/help.php:24
+msgid "How to publish a menu and what each shortcode option does."
+msgstr ""
+
+#: admin/views/help.php:31
+msgid "Publish a menu in four steps"
+msgstr ""
+
+#: admin/views/help.php:33
+msgid "Create a menu under All Menus."
+msgstr ""
+
+#: admin/views/help.php:34
+msgid "Add categories such as Starters, Mains and Drinks."
+msgstr ""
+
+#: admin/views/help.php:35
+msgid "Add dishes to each category with a photo, description and price."
+msgstr ""
+
+#: admin/views/help.php:36
+msgid "Set the menu to Active, copy its shortcode and paste it into a page."
+msgstr ""
+
+#: admin/views/help.php:38
+msgid "A draft menu shows nothing to visitors, so you can build it in the open."
+msgstr ""
+
+#: admin/views/help.php:42
+msgid "Your shortcodes"
+msgstr ""
+
+#: admin/views/help.php:44
+msgid "Shortcodes appear here once you create a menu."
+msgstr ""
+
+#: admin/views/help.php:58
+msgid "Shortcode options"
+msgstr ""
+
+#: admin/views/help.php:62
+msgid "Option"
+msgstr ""
+
+#: admin/views/help.php:63
+msgid "What it does"
+msgstr ""
+
+#: admin/views/help.php:67
+msgid "The menu to show. Falls back to the default menu in Settings."
+msgstr ""
+
+#: admin/views/help.php:68
+msgid "Use the menu slug instead of its ID."
+msgstr ""
+
+#: admin/views/help.php:69
+msgid "classic, card or two-column. Overrides the menu setting for this placement only."
+msgstr ""
+
+#: admin/views/help.php:70
+msgid "yes or no. Show the category bar."
+msgstr ""
+
+#: admin/views/help.php:71
+msgid "yes or no. Show photos."
+msgstr ""
+
+#: admin/views/help.php:72
+msgid "yes or no. Show dish descriptions."
+msgstr ""
+
+#: admin/views/help.php:73
+msgid "yes or no. Show prices."
+msgstr ""
+
+#: admin/views/help.php:77
+msgid "Example:"
+msgstr ""
+
+#: admin/views/help.php:83
+msgid "Category icon pack"
+msgstr ""
+
+#. translators: %d: number of icons in the pack.
+#: admin/views/help.php:88
+msgid "%d line-art icons ship with the plugin. Pick one for a category and it appears in the menu navigation. They are drawn inline as SVG, so they inherit your colours and stay sharp at any size."
+msgstr ""
+
+#: admin/views/help.php:123
+msgid "For developers"
+msgstr ""
+
+#: admin/views/help.php:124
+msgid "Templates can be overridden from your theme at restaurant-menu-builder/menu.php, category.php, item.php or layout-{name}.php."
+msgstr ""
+
+#: admin/views/help.php:128
+msgid "Hook"
+msgstr ""
+
+#: admin/views/help.php:129
+msgid "Purpose"
+msgstr ""
+
+#: admin/views/help.php:133
+msgid "Register another layout."
+msgstr ""
+
+#: admin/views/help.php:134
+msgid "Add a currency."
+msgstr ""
+
+#: admin/views/help.php:135
+msgid "Add a category icon. Supply label, group and a paths array of SVG path data drawn on a 24x24 grid."
+msgstr ""
+
+#: admin/views/help.php:136
+msgid "Change display options before a menu renders."
+msgstr ""
+
+#: admin/views/help.php:137
+msgid "Change who can manage menus."
+msgstr ""
+
+#: admin/views/help.php:138
+msgid "Force the menu CSS and JS to load on a template you render yourself."
+msgstr ""
+
+#: admin/views/items.php:23
+msgid "Menu items"
+msgstr ""
+
+#: admin/views/items.php:24
+msgid "Every dish, its photo, description and price."
+msgstr ""
+
+#: admin/views/items.php:38 admin/views/items.php:46
+msgid "Search items"
+msgstr ""
+
+#: admin/views/items.php:59
+msgid "Drag an item to reorder it inside its category, or use the arrow buttons."
+msgstr ""
+
+#: admin/views/items.php:61
+msgid "Loading items…"
+msgstr ""
+
+#: admin/views/menu-editor.php:31
+msgid "All menus"
+msgstr ""
+
+#: admin/views/menu-editor.php:46
+msgid "Save changes"
+msgstr ""
+
+#: admin/views/menu-editor.php:53
+msgid "Menu editor sections"
+msgstr ""
+
+#: admin/views/menu-editor.php:54
+msgid "Categories & items"
+msgstr ""
+
+#: admin/views/menu-editor.php:56 admin/views/menu-editor.php:85
+msgid "Menu settings"
+msgstr ""
+
+#: admin/views/menu-editor.php:77
+msgid "Reset"
+msgstr ""
+
+#: admin/views/menu-editor.php:95 admin/views/style.php:49
+msgid "Live preview"
+msgstr ""
+
+#: admin/views/menu-editor.php:97 admin/views/style.php:50
+msgid "Preview width"
+msgstr ""
+
+#: admin/views/menu-editor.php:98 admin/views/style.php:51
+msgid "Desktop"
+msgstr ""
+
+#: admin/views/menu-editor.php:99 admin/views/style.php:52
+msgid "Tablet"
+msgstr ""
+
+#: admin/views/menu-editor.php:100 admin/views/style.php:53
+msgid "Mobile"
+msgstr ""
+
+#: admin/views/menu-editor.php:103
+msgid "Draft categories and items are included here so you can check them before publishing."
+msgstr ""
+
+#: admin/views/menu-editor.php:108 admin/views/style.php:65
+msgid "Menu preview"
+msgstr ""
+
+#: admin/views/menus.php:23
+msgid "Restaurant menus"
+msgstr ""
+
+#: admin/views/menus.php:24
+msgid "Build a menu, fill it with categories and dishes, then publish it with a shortcode."
+msgstr ""
+
+#: admin/views/menus.php:31 admin/views/menus.php:39
+msgid "Search menus"
+msgstr ""
+
+#: admin/views/menus.php:42
+msgid "Filter by status"
+msgstr ""
+
+#: admin/views/menus.php:43
+msgid "All statuses"
+msgstr ""
+
+#: admin/views/menus.php:57
+msgid "Loading menus…"
+msgstr ""
+
+#: admin/views/settings.php:28
+msgid "Currency, default display options and housekeeping."
+msgstr ""
+
+#: admin/views/settings.php:35
+msgid "General"
+msgstr ""
+
+#: admin/views/settings.php:38
+msgid "Currency"
+msgstr ""
+
+#: admin/views/settings.php:49
+msgid "Symbol position"
+msgstr ""
+
+#: admin/views/settings.php:51
+msgid "Before the amount"
+msgstr ""
+
+#: admin/views/settings.php:52
+msgid "After the amount"
+msgstr ""
+
+#: admin/views/settings.php:57
+msgid "Default menu"
+msgstr ""
+
+#: admin/views/settings.php:59
+msgid "None"
+msgstr ""
+
+#: admin/views/settings.php:66
+msgid "Used when the shortcode is added without an ID."
+msgstr ""
+
+#: admin/views/settings.php:70
+msgid "Image size"
+msgstr ""
+
+#: admin/views/settings.php:78
+msgid "Photos are served from the media library at this size. Nothing is duplicated on the server."
+msgstr ""
+
+#: admin/views/settings.php:83
+msgid "Load images only as they scroll into view"
+msgstr ""
+
+#: admin/views/settings.php:88
+msgid "Display defaults"
+msgstr ""
+
+#: admin/views/settings.php:89
+msgid "New menus start with these options. Each menu can change them later."
+msgstr ""
+
+#: admin/views/settings.php:120
+msgid "Performance"
+msgstr ""
+
+#: admin/views/settings.php:124
+msgid "Cache rendered menus"
+msgstr ""
+
+#: admin/views/settings.php:126
+msgid "The cache clears itself whenever you change a menu, category, item or style."
+msgstr ""
+
+#: admin/views/settings.php:129
+msgid "Cache duration (hours)"
+msgstr ""
+
+#: admin/views/settings.php:142
+msgid "Clear menu cache now"
+msgstr ""
+
+#: admin/views/settings.php:147
+msgid "Advanced"
+msgstr ""
+
+#: admin/views/settings.php:150
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/views/settings.php:159
+msgid "Prefix your selectors with .rmb-menu so the rules stay inside the menu."
+msgstr ""
+
+#: admin/views/settings.php:164
+msgid "Delete all menus, categories, items and settings when the plugin is uninstalled"
+msgstr ""
+
+#: admin/views/settings.php:166
+msgid "Off by default. Deactivating the plugin never removes data."
+msgstr ""
+
+#: admin/views/settings.php:169
+msgid "Restore default settings"
+msgstr ""
+
+#: admin/views/settings.php:176
+msgid "Save settings"
+msgstr ""
+
+#: admin/views/style.php:23
+msgid "These are the defaults for every menu. A single menu can override them in its own Style tab."
+msgstr ""
+
+#: admin/views/style.php:35
+msgid "Save style"
+msgstr ""
+
+#: admin/views/style.php:57
+msgid "Create a menu to see these colours applied to real content."
+msgstr ""
+
+#: admin/views/style.php:59
+msgid "Previewing your first menu with these colours."
+msgstr ""
+
+#: frontend/class-renderer.php:96
+msgid "This menu is no longer available."
+msgstr ""
+
+#: frontend/class-renderer.php:100
+msgid "This menu is still a draft. Set it to Active to publish it."
+msgstr ""
+
+#: frontend/class-renderer.php:124
+msgid "This menu has no categories yet."
+msgstr ""
+
+#: frontend/templates/menu.php:46
+msgid "Menu categories"
+msgstr ""
+
+#: includes/class-category.php:115
+msgid "Choose a menu for this category."
+msgstr ""
+
+#: includes/class-category.php:139 includes/class-category.php:205
+msgid "Unable to save the category. Please try again."
+msgstr ""
+
+#: includes/class-category.php:158 includes/class-category.php:223 includes/class-category.php:251
+msgid "That category no longer exists."
+msgstr ""
+
+#: includes/class-category.php:233
+msgid "Unable to delete the category. Please try again."
+msgstr ""
+
+#: includes/class-category.php:257
+msgid "Unable to duplicate the category. Please try again."
+msgstr ""
+
+#: includes/class-category.php:306 includes/class-item.php:422
+msgid "Unable to save the new order. Please reload the page and try again."
+msgstr ""
+
+#: includes/class-currency.php:39
+msgid "US dollar"
+msgstr ""
+
+#: includes/class-currency.php:44
+msgid "Euro"
+msgstr ""
+
+#: includes/class-currency.php:49
+msgid "Pound sterling"
+msgstr ""
+
+#: includes/class-currency.php:54
+msgid "Pakistani rupee"
+msgstr ""
+
+#: includes/class-currency.php:59
+msgid "UAE dirham"
+msgstr ""
+
+#: includes/class-currency.php:64
+msgid "Canadian dollar"
+msgstr ""
+
+#: includes/class-currency.php:69
+msgid "Australian dollar"
+msgstr ""
+
+#: includes/class-currency.php:74
+msgid "Indian rupee"
+msgstr ""
+
+#: includes/class-currency.php:79
+msgid "Saudi riyal"
+msgstr ""
+
+#: includes/class-icons.php:34
+msgid "Mains & dishes"
+msgstr ""
+
+#: includes/class-icons.php:35
+msgid "Seafood"
+msgstr ""
+
+#: includes/class-icons.php:36
+msgid "Fruit & vegetables"
+msgstr ""
+
+#: includes/class-icons.php:37
+msgid "Desserts"
+msgstr ""
+
+#: includes/class-icons.php:38
+msgid "Drinks"
+msgstr ""
+
+#: includes/class-icons.php:39
+msgid "Pantry & tools"
+msgstr ""
+
+#: includes/class-icons.php:40
+msgid "Service"
+msgstr ""
+
+#: includes/class-icons.php:41
+msgid "Labels"
+msgstr ""
+
+#: includes/class-icons.php:75
+msgid "Pizza slice"
+msgstr ""
+
+#: includes/class-icons.php:84
+msgid "Whole pizza"
+msgstr ""
+
+#: includes/class-icons.php:94
+msgid "Burger"
+msgstr ""
+
+#: includes/class-icons.php:105
+msgid "Hot dog"
+msgstr ""
+
+#: includes/class-icons.php:114
+msgid "Sandwich"
+msgstr ""
+
+#: includes/class-icons.php:123
+msgid "Taco"
+msgstr ""
+
+#: includes/class-icons.php:132
+msgid "Steak"
+msgstr ""
+
+#: includes/class-icons.php:140
+msgid "Ham"
+msgstr ""
+
+#: includes/class-icons.php:148
+msgid "Chicken leg"
+msgstr ""
+
+#: includes/class-icons.php:157
+msgid "Roast"
+msgstr ""
+
+#: includes/class-icons.php:166
+msgid "Sausages"
+msgstr ""
+
+#: includes/class-icons.php:175
+msgid "Skewer"
+msgstr ""
+
+#: includes/class-icons.php:185
+msgid "Pasta"
+msgstr ""
+
+#: includes/class-icons.php:195
+msgid "Noodles"
+msgstr ""
+
+#: includes/class-icons.php:204
+msgid "Rice bowl"
+msgstr ""
+
+#: includes/class-icons.php:213
+msgid "Soup"
+msgstr ""
+
+#: includes/class-icons.php:222
+msgid "Salad"
+msgstr ""
+
+#: includes/class-icons.php:232
+msgid "Fried egg"
+msgstr ""
+
+#: includes/class-icons.php:240
+msgid "Grill"
+msgstr ""
+
+#: includes/class-icons.php:250
+msgid "Fries & sides"
+msgstr ""
+
+#: includes/class-icons.php:259
+msgid "Starter"
+msgstr ""
+
+#: includes/class-icons.php:268
+msgid "Cheese"
+msgstr ""
+
+#: includes/class-icons.php:277
+msgid "Bread"
+msgstr ""
+
+#: includes/class-icons.php:286
+msgid "Baguette"
+msgstr ""
+
+#: includes/class-icons.php:294
+msgid "Croissant"
+msgstr ""
+
+#: includes/class-icons.php:302
+msgid "Breakfast"
+msgstr ""
+
+#: includes/class-icons.php:312
+msgid "Sauces"
+msgstr ""
+
+#: includes/class-icons.php:332
+msgid "Fish"
+msgstr ""
+
+#: includes/class-icons.php:342
+msgid "Salmon fillet"
+msgstr ""
+
+#: includes/class-icons.php:350
+msgid "Shrimp"
+msgstr ""
+
+#: includes/class-icons.php:361
+msgid "Sushi"
+msgstr ""
+
+#: includes/class-icons.php:370
+msgid "Canned fish"
+msgstr ""
+
+#: includes/class-icons.php:392
+msgid "Carrot"
+msgstr ""
+
+#: includes/class-icons.php:402
+msgid "Pepper"
+msgstr ""
+
+#: includes/class-icons.php:411
+msgid "Mushroom"
+msgstr ""
+
+#: includes/class-icons.php:420
+msgid "Strawberry"
+msgstr ""
+
+#: includes/class-icons.php:430
+msgid "Banana"
+msgstr ""
+
+#: includes/class-icons.php:438
+msgid "Citrus"
+msgstr ""
+
+#: includes/class-icons.php:459
+msgid "Dessert"
+msgstr ""
+
+#: includes/class-icons.php:469
+msgid "Cupcake"
+msgstr ""
+
+#: includes/class-icons.php:479
+msgid "Cake"
+msgstr ""
+
+#: includes/class-icons.php:489
+msgid "Cake slice"
+msgstr ""
+
+#: includes/class-icons.php:497
+msgid "Ice cream cone"
+msgstr ""
+
+#: includes/class-icons.php:507
+msgid "Sundae"
+msgstr ""
+
+#: includes/class-icons.php:516
+msgid "Ice lolly"
+msgstr ""
+
+#: includes/class-icons.php:525
+msgid "Donut"
+msgstr ""
+
+#: includes/class-icons.php:534
+msgid "Cookie"
+msgstr ""
+
+#: includes/class-icons.php:542
+msgid "Sweets"
+msgstr ""
+
+#: includes/class-icons.php:551
+msgid "Chocolate"
+msgstr ""
+
+#: includes/class-icons.php:572
+msgid "Coffee"
+msgstr ""
+
+#: includes/class-icons.php:581
+msgid "Coffee to go"
+msgstr ""
+
+#: includes/class-icons.php:591
+msgid "Espresso"
+msgstr ""
+
+#: includes/class-icons.php:600
+msgid "Tea"
+msgstr ""
+
+#: includes/class-icons.php:610
+msgid "Teapot"
+msgstr ""
+
+#: includes/class-icons.php:621
+msgid "Beer"
+msgstr ""
+
+#: includes/class-icons.php:631
+msgid "Wine"
+msgstr ""
+
+#: includes/class-icons.php:640
+msgid "Wine bottle"
+msgstr ""
+
+#: includes/class-icons.php:648
+msgid "Cocktail"
+msgstr ""
+
+#: includes/class-icons.php:657
+msgid "Martini"
+msgstr ""
+
+#: includes/class-icons.php:666
+msgid "Cold drink"
+msgstr ""
+
+#: includes/class-icons.php:675
+msgid "Milk"
+msgstr ""
+
+#: includes/class-icons.php:684
+msgid "Water"
+msgstr ""
+
+#: includes/class-icons.php:694
+msgid "Smoothie"
+msgstr ""
+
+#: includes/class-icons.php:716
+msgid "Oil"
+msgstr ""
+
+#: includes/class-icons.php:725
+msgid "Salt"
+msgstr ""
+
+#: includes/class-icons.php:735
+msgid "Pepper mill"
+msgstr ""
+
+#: includes/class-icons.php:745
+msgid "Honey"
+msgstr ""
+
+#: includes/class-icons.php:754
+msgid "Preserves"
+msgstr ""
+
+#: includes/class-icons.php:763
+msgid "Cutting board"
+msgstr ""
+
+#: includes/class-icons.php:773
+msgid "Whisk"
+msgstr ""
+
+#: includes/class-icons.php:782
+msgid "Colander"
+msgstr ""
+
+#: includes/class-icons.php:791
+msgid "Kitchen scale"
+msgstr ""
+
+#: includes/class-icons.php:801
+msgid "Coffee grinder"
+msgstr ""
+
+#: includes/class-icons.php:824 includes/class-icons.php:910
+msgid "Chef special"
+msgstr ""
+
+#: includes/class-icons.php:833
+msgid "Served dish"
+msgstr ""
+
+#: includes/class-icons.php:843
+msgid "Cutlery"
+msgstr ""
+
+#: includes/class-icons.php:851
+msgid "Restaurant"
+msgstr ""
+
+#: includes/class-icons.php:859
+msgid "Menu card"
+msgstr ""
+
+#: includes/class-icons.php:867
+msgid "Dining table"
+msgstr ""
+
+#: includes/class-icons.php:879
+msgid "Takeaway"
+msgstr ""
+
+#: includes/class-icons.php:888
+msgid "Service bell"
+msgstr ""
+
+#: includes/class-icons.php:917
+msgid "Spicy"
+msgstr ""
+
+#: includes/class-icons.php:925
+msgid "Vegan"
+msgstr ""
+
+#: includes/class-icons.php:933
+msgid "Kids"
+msgstr ""
+
+#. translators: 1: required PHP version, 2: current PHP version.
+#: includes/class-installer.php:36 restaurant-menu-builder.php:89
+msgid "Restaurant Menu Builder needs PHP %1$s or newer. This server runs PHP %2$s."
+msgstr ""
+
+#: includes/class-installer.php:41
+msgid "Plugin activation stopped"
+msgstr ""
+
+#: includes/class-item.php:200 includes/class-item.php:259
+msgid "Choose a category for this item."
+msgstr ""
+
+#: includes/class-item.php:230 includes/class-item.php:323
+msgid "Unable to save the item. Please try again."
+msgstr ""
+
+#: includes/class-item.php:249 includes/class-item.php:339 includes/class-item.php:361
+msgid "That item no longer exists."
+msgstr ""
+
+#: includes/class-item.php:343
+msgid "Unable to delete the item. Please try again."
+msgstr ""
+
+#: includes/class-item.php:367
+msgid "Unable to duplicate the item. Please try again."
+msgstr ""
+
+#: includes/class-menu.php:217 includes/class-menu.php:284
+msgid "Unable to save the menu. Please try again."
+msgstr ""
+
+#: includes/class-menu.php:243 includes/class-menu.php:311 includes/class-menu.php:352 includes/class-rest-api.php:329 includes/class-rest-api.php:428 includes/class-rest-api.php:457
+msgid "That menu no longer exists."
+msgstr ""
+
+#: includes/class-menu.php:323
+msgid "Unable to delete the menu. Please try again."
+msgstr ""
+
+#: includes/class-menu.php:367
+msgid "Unable to duplicate the menu. Please try again."
+msgstr ""
+
+#: includes/class-rest-api.php:351
+msgid "Menu created."
+msgstr ""
+
+#: includes/class-rest-api.php:374
+msgid "Menu saved."
+msgstr ""
+
+#: includes/class-rest-api.php:392
+msgid "Menu deleted."
+msgstr ""
+
+#: includes/class-rest-api.php:411
+msgid "Menu duplicated."
+msgstr ""
+
+#: includes/class-rest-api.php:518
+msgid "Category added."
+msgstr ""
+
+#: includes/class-rest-api.php:541
+msgid "Category saved."
+msgstr ""
+
+#: includes/class-rest-api.php:559
+msgid "Category deleted."
+msgstr ""
+
+#: includes/class-rest-api.php:578
+msgid "Category duplicated."
+msgstr ""
+
+#: includes/class-rest-api.php:601 includes/class-rest-api.php:726
+msgid "Order saved."
+msgstr ""
+
+#: includes/class-rest-api.php:643
+msgid "Item added."
+msgstr ""
+
+#: includes/class-rest-api.php:666
+msgid "Item saved."
+msgstr ""
+
+#: includes/class-rest-api.php:684
+msgid "Item deleted."
+msgstr ""
+
+#: includes/class-rest-api.php:703
+msgid "Item duplicated."
+msgstr ""
+
+#: includes/class-rest-api.php:766
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-rest-api.php:783
+msgid "Settings restored to defaults."
+msgstr ""
+
+#: includes/class-rest-api.php:796
+msgid "Menu cache cleared."
+msgstr ""
+
+#: includes/class-settings.php:101
+msgid "Inherit from theme"
+msgstr ""
+
+#: includes/class-settings.php:102
+msgid "System sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:103
+msgid "Classic serif"
+msgstr ""
+
+#: includes/class-settings.php:104
+msgid "Slab serif"
+msgstr ""
+
+#: includes/class-settings.php:105
+msgid "Humanist sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:106
+msgid "Geometric sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:107
+msgid "Monospace"
+msgstr ""
+
+#: includes/class-settings.php:128
+msgid "Classic"
+msgstr ""
+
+#: includes/class-settings.php:129
+msgid "Card"
+msgstr ""
+
+#: includes/class-settings.php:130
+msgid "Two column"
+msgstr ""
+
+#: includes/class-shortcode.php:72
+msgid "Add a menu ID to the shortcode, for example [restaurant_menu id=\"1\"]."
+msgstr ""
+
+#. translators: %s: original record name.
+#: includes/helpers.php:214
+msgid "%s (copy)"
+msgstr ""
+
+#. translators: 1: required WordPress version, 2: current WordPress version.
+#: restaurant-menu-builder.php:94
+msgid "Restaurant Menu Builder needs WordPress %1$s or newer. This site runs WordPress %2$s."
+msgstr ""
