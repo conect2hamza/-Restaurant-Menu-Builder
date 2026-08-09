@@ -1,9 +1,0 @@
-# Build output — regenerate with the zip command in README.md.
-/restaurant-menu-builder.zip
-
-# OS and editor noise.
-.DS_Store
-Thumbs.db
-*.swp
-.idea/
-.vscode/
