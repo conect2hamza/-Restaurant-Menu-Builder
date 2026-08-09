@@ -249,8 +249,8 @@ class Item {
 			return new \WP_Error( 'rmb_item_missing', __( 'That item no longer exists.', 'restaurant-menu-builder' ), array( 'status' => 404 ) );
 		}
 
-		$data   = array();
-		$format = array();
+		$data    = array();
+		$formats = array();
 
 		if ( array_key_exists( 'category_id', $input ) ) {
 			$category = Category::find( absint( $input['category_id'] ) );
@@ -260,12 +260,12 @@ class Item {
 			}
 
 			if ( $category['id'] !== $item['category_id'] ) {
-				$data['category_id'] = $category['id'];
-				$format[]            = '%d';
-				$data['menu_id']     = (int) $category['menu_id'];
-				$format[]            = '%d';
-				$data['sort_order']  = Database::next_sort_order( Database::ITEMS, 'category_id', $category['id'] );
-				$format[]            = '%d';
+				$data['category_id']    = $category['id'];
+				$formats['category_id'] = '%d';
+				$data['menu_id']        = (int) $category['menu_id'];
+				$formats['menu_id']     = '%d';
+				$data['sort_order']     = Database::next_sort_order( Database::ITEMS, 'category_id', $category['id'] );
+				$formats['sort_order']  = '%d';
 			}
 		}
 
@@ -276,28 +276,28 @@ class Item {
 				return new \WP_Error( 'rmb_item_name_required', __( 'Enter an item name.', 'restaurant-menu-builder' ), array( 'status' => 400 ) );
 			}
 
-			$data['name'] = substr( $name, 0, 191 );
-			$format[]     = '%s';
+			$data['name']    = substr( $name, 0, 191 );
+			$formats['name'] = '%s';
 		}
 
 		if ( array_key_exists( 'description', $input ) ) {
-			$data['description'] = sanitize_textarea_field( (string) $input['description'] );
-			$format[]            = '%s';
+			$data['description']    = sanitize_textarea_field( (string) $input['description'] );
+			$formats['description'] = '%s';
 		}
 
 		if ( array_key_exists( 'image_id', $input ) ) {
-			$data['image_id'] = Category::sanitize_image_id( $input['image_id'] );
-			$format[]         = '%d';
+			$data['image_id']    = Category::sanitize_image_id( $input['image_id'] );
+			$formats['image_id'] = '%d';
 		}
 
 		if ( array_key_exists( 'status', $input ) ) {
-			$data['status'] = sanitize_status( $input['status'] );
-			$format[]       = '%s';
+			$data['status']    = sanitize_status( $input['status'] );
+			$formats['status'] = '%s';
 		}
 
 		if ( array_key_exists( 'sort_order', $input ) ) {
-			$data['sort_order'] = absint( $input['sort_order'] );
-			$format[]           = '%d';
+			$data['sort_order']    = absint( $input['sort_order'] );
+			$formats['sort_order'] = '%d';
 		}
 
 		$touches_pricing = array_intersect( array( 'price', 'sale_price', 'price_type', 'variations', 'badge' ), array_keys( $input ) );
@@ -305,18 +305,27 @@ class Item {
 		if ( ! empty( $touches_pricing ) ) {
 			$pricing = self::sanitize_pricing( $input, $item );
 
-			$data['price']      = $pricing['price'];
-			$format[]           = '%s';
-			$data['sale_price'] = $pricing['sale_price'];
-			$format[]           = '%s';
-			$data['price_type'] = $pricing['price_type'];
-			$format[]           = '%s';
-			$data['settings']   = encode_json( $pricing['settings'] );
-			$format[]           = '%s';
+			$data['price']         = $pricing['price'];
+			$formats['price']      = '%s';
+			$data['sale_price']    = $pricing['sale_price'];
+			$formats['sale_price'] = '%s';
+			$data['price_type']    = $pricing['price_type'];
+			$formats['price_type'] = '%s';
+			$data['settings']      = encode_json( $pricing['settings'] );
+			$formats['settings']   = '%s';
 		}
 
 		if ( empty( $data ) ) {
 			return true;
+		}
+
+		// Formats are keyed by column and flattened here, so a column written by
+		// more than one branch above cannot shift the remaining formats out of
+		// step with $data — which previously stored a decimal price as %d.
+		$format = array();
+
+		foreach ( array_keys( $data ) as $column ) {
+			$format[] = $formats[ $column ];
 		}
 
 		if ( ! Database::update( Database::ITEMS, $id, $data, $format ) ) {

@@ -54,6 +54,8 @@ function rmb_uninstall_site(): void {
 		}
 	}
 
+	delete_transient( 'rmb_shortcode_usage' );
+
 	foreach ( array( 'rmb_settings', 'rmb_style', 'rmb_db_version', 'rmb_version', 'rmb_cache_index', 'rmb_cache_generation' ) as $option ) {
 		delete_option( $option );
 	}

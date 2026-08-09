@@ -78,11 +78,17 @@ class Installer {
 	public static function maybe_upgrade(): void {
 		$stored = (string) get_option( self::DB_VERSION_OPTION, '' );
 
-		if ( RMB_DB_VERSION === $stored ) {
+		if ( RMB_DB_VERSION !== $stored ) {
+			self::install();
+
 			return;
 		}
 
-		self::install();
+		// A release can ship without a schema change. The plugin version is still
+		// recorded so upgrade routines and support have an accurate value.
+		if ( RMB_VERSION !== (string) get_option( self::PLUGIN_VERSION_OPTION, '' ) ) {
+			update_option( self::PLUGIN_VERSION_OPTION, RMB_VERSION, false );
+		}
 	}
 
 	/**

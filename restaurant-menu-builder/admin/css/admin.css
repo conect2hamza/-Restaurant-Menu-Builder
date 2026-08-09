@@ -569,12 +569,6 @@
 	width: 100%;
 }
 
-.rmb-image-empty {
-	color: var(--rmb-a-muted);
-	font-size: 11px;
-	text-align: center;
-}
-
 .rmb-image-actions {
 	display: flex;
 	flex-direction: column;
@@ -601,42 +595,6 @@
 	font-weight: 650;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-}
-
-/* --------------------------------------------------------- Segmented control */
-
-.rmb-segmented {
-	background: var(--rmb-a-canvas);
-	border: 1px solid var(--rmb-a-line);
-	border-radius: 10px;
-	display: inline-flex;
-	gap: 2px;
-	padding: 3px;
-}
-
-.rmb-segmented button {
-	background: none;
-	border: 0;
-	border-radius: 8px;
-	color: var(--rmb-a-muted);
-	cursor: pointer;
-	font-size: 12px;
-	font-weight: 600;
-	padding: 6px 12px;
-}
-
-.rmb-segmented button:hover {
-	color: var(--rmb-a-ink);
-}
-
-.rmb-segmented button.is-active {
-	background: var(--rmb-a-surface);
-	box-shadow: 0 1px 2px rgba(24, 28, 40, 0.12);
-	color: var(--rmb-a-brand-dark);
-}
-
-.rmb-segmented button:focus-visible {
-	outline: 2px solid var(--rmb-a-brand);
 }
 
 /* ------------------------------------------------------------------- Buttons */

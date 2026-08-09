@@ -463,6 +463,14 @@
 			'aria-label': __( 'Search icons', 'restaurant-menu-builder' )
 		} );
 
+		// The picker lives inside the modal form, where Enter would otherwise
+		// submit the whole record while the user is still filtering icons.
+		search.addEventListener( 'keydown', function ( event ) {
+			if ( event.key === 'Enter' ) {
+				event.preventDefault();
+			}
+		} );
+
 		var grid = el( 'div', { class: 'rmb-icon-grid', role: 'group' } );
 		var emptyMessage = el( 'p', { class: 'rmb-icon-empty', text: __( 'No icon matches that search.', 'restaurant-menu-builder' ) } );
 

@@ -177,47 +177,47 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
-#: admin/js/admin.js:472
+#: admin/js/admin.js:462
 msgid "Search icons…"
 msgstr ""
 
-#: admin/js/admin.js:473
+#: admin/js/admin.js:463
 msgid "Search icons"
 msgstr ""
 
-#: admin/js/admin.js:477
+#: admin/js/admin.js:475
 msgid "No icon matches that search."
 msgstr ""
 
-#: admin/js/admin.js:485
+#: admin/js/admin.js:483
 msgid "No icon"
 msgstr ""
 
-#: admin/js/admin.js:574
+#: admin/js/admin.js:572
 msgid "Clear"
 msgstr ""
 
-#: admin/js/admin.js:606
+#: admin/js/admin.js:604
 msgid "Remove"
 msgstr ""
 
-#: admin/js/admin.js:617 admin/js/admin.js:654
+#: admin/js/admin.js:615 admin/js/admin.js:652
 msgid "Choose image"
 msgstr ""
 
-#: admin/js/admin.js:620
+#: admin/js/admin.js:618
 msgid "The media library is unavailable on this screen."
 msgstr ""
 
-#: admin/js/admin.js:625
+#: admin/js/admin.js:623
 msgid "Choose an image"
 msgstr ""
 
-#: admin/js/admin.js:626
+#: admin/js/admin.js:624
 msgid "Use this image"
 msgstr ""
 
-#: admin/js/admin.js:650
+#: admin/js/admin.js:648
 msgid "Change image"
 msgstr ""
 
@@ -542,19 +542,19 @@ msgstr ""
 msgid "Copy the shortcode manually: "
 msgstr ""
 
-#: admin/js/screens.js:1142 admin/views/settings.php:104
+#: admin/js/screens.js:1142 admin/views/settings.php:105
 msgid "Show category navigation"
 msgstr ""
 
-#: admin/js/screens.js:1143 admin/views/settings.php:105
+#: admin/js/screens.js:1143 admin/views/settings.php:106
 msgid "Show images"
 msgstr ""
 
-#: admin/js/screens.js:1144 admin/views/settings.php:106
+#: admin/js/screens.js:1144 admin/views/settings.php:107
 msgid "Show descriptions"
 msgstr ""
 
-#: admin/js/screens.js:1145 admin/views/settings.php:107
+#: admin/js/screens.js:1145 admin/views/settings.php:108
 msgid "Show prices"
 msgstr ""
 
@@ -566,7 +566,7 @@ msgstr ""
 msgid "Used by [restaurant_menu slug=\"…\"]."
 msgstr ""
 
-#: admin/js/screens.js:1163 admin/views/settings.php:92
+#: admin/js/screens.js:1163 admin/views/settings.php:93
 msgid "Layout"
 msgstr ""
 
@@ -997,63 +997,63 @@ msgstr ""
 msgid "Photos are served from the media library at this size. Nothing is duplicated on the server."
 msgstr ""
 
-#: admin/views/settings.php:83
+#: admin/views/settings.php:84
 msgid "Load images only as they scroll into view"
 msgstr ""
 
-#: admin/views/settings.php:88
+#: admin/views/settings.php:89
 msgid "Display defaults"
 msgstr ""
 
-#: admin/views/settings.php:89
+#: admin/views/settings.php:90
 msgid "New menus start with these options. Each menu can change them later."
 msgstr ""
 
-#: admin/views/settings.php:120
+#: admin/views/settings.php:122
 msgid "Performance"
 msgstr ""
 
-#: admin/views/settings.php:124
+#: admin/views/settings.php:127
 msgid "Cache rendered menus"
 msgstr ""
 
-#: admin/views/settings.php:126
+#: admin/views/settings.php:129
 msgid "The cache clears itself whenever you change a menu, category, item or style."
 msgstr ""
 
-#: admin/views/settings.php:129
+#: admin/views/settings.php:132
 msgid "Cache duration (hours)"
 msgstr ""
 
-#: admin/views/settings.php:142
+#: admin/views/settings.php:145
 msgid "Clear menu cache now"
 msgstr ""
 
-#: admin/views/settings.php:147
+#: admin/views/settings.php:150
 msgid "Advanced"
 msgstr ""
 
-#: admin/views/settings.php:150
+#: admin/views/settings.php:153
 msgid "Custom CSS"
 msgstr ""
 
-#: admin/views/settings.php:159
+#: admin/views/settings.php:162
 msgid "Prefix your selectors with .rmb-menu so the rules stay inside the menu."
 msgstr ""
 
-#: admin/views/settings.php:164
+#: admin/views/settings.php:167
 msgid "Delete all menus, categories, items and settings when the plugin is uninstalled"
 msgstr ""
 
-#: admin/views/settings.php:166
+#: admin/views/settings.php:169
 msgid "Off by default. Deactivating the plugin never removes data."
 msgstr ""
 
-#: admin/views/settings.php:169
+#: admin/views/settings.php:172
 msgid "Restore default settings"
 msgstr ""
 
-#: admin/views/settings.php:176
+#: admin/views/settings.php:179
 msgid "Save settings"
 msgstr ""
 
@@ -1109,7 +1109,7 @@ msgstr ""
 msgid "Unable to duplicate the category. Please try again."
 msgstr ""
 
-#: includes/class-category.php:306 includes/class-item.php:422
+#: includes/class-category.php:306 includes/class-item.php:431
 msgid "Unable to save the new order. Please reload the page and try again."
 msgstr ""
 
@@ -1530,19 +1530,19 @@ msgstr ""
 msgid "Choose a category for this item."
 msgstr ""
 
-#: includes/class-item.php:230 includes/class-item.php:323
+#: includes/class-item.php:230 includes/class-item.php:332
 msgid "Unable to save the item. Please try again."
 msgstr ""
 
-#: includes/class-item.php:249 includes/class-item.php:339 includes/class-item.php:361
+#: includes/class-item.php:249 includes/class-item.php:348 includes/class-item.php:370
 msgid "That item no longer exists."
 msgstr ""
 
-#: includes/class-item.php:343
+#: includes/class-item.php:352
 msgid "Unable to delete the item. Please try again."
 msgstr ""
 
-#: includes/class-item.php:367
+#: includes/class-item.php:376
 msgid "Unable to duplicate the item. Please try again."
 msgstr ""
 
