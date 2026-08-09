@@ -96,6 +96,7 @@ class Style {
 		);
 
 		$flags = array(
+			'nav_wrap'           => 'has-nav-wrap',
 			'nav_sticky'         => 'is-nav-sticky',
 			'nav_icons'          => 'has-nav-icons',
 			'nav_border'         => 'has-nav-border',

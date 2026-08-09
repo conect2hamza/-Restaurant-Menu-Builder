@@ -70,17 +70,38 @@
 	border-bottom: 1px solid var(--rmb-border);
 }
 
+/* The bar wraps by default, so every category is on screen at any width. The
+   single line that scrolls sideways is available as a setting, but it hides
+   whatever does not fit, which is a poor default on a phone. */
 .rmb-menu .rmb-nav-list {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: flex-start;
-	gap: 6px;
+	gap: 4px 6px;
 	list-style: none;
 	margin: 0;
-	padding: 2px 2px 6px;
+	padding: 2px;
+}
+
+.rmb-menu:not(.has-nav-wrap) .rmb-nav-list {
+	flex-wrap: nowrap;
 	overflow-x: auto;
+	padding-bottom: 6px;
+	scroll-snap-type: x proximity;
 	scrollbar-width: thin;
 	-webkit-overflow-scrolling: touch;
+}
+
+.rmb-menu:not(.has-nav-wrap) .rmb-nav-item {
+	scroll-snap-align: start;
+}
+
+/* A very long list still has to leave room for the menu itself when the bar is
+   pinned, so it scrolls vertically inside its own box rather than filling the
+   screen. */
+.rmb-menu.is-nav-sticky.has-nav-wrap .rmb-nav-list {
+	max-height: 38vh;
+	overflow-y: auto;
 }
 
 .rmb-menu.rmb-nav-align-center .rmb-nav-list {
@@ -94,6 +115,7 @@
 .rmb-menu .rmb-nav-item {
 	margin: 0;
 	flex: 0 0 auto;
+	max-width: 100%;
 }
 
 /* Icons are optional; hiding them leaves the label centred on its own. */
@@ -209,6 +231,17 @@
 /* Plain text, separated by a middot. */
 .rmb-menu.rmb-nav-plain .rmb-nav-link {
 	padding: 6px 8px;
+}
+
+/* CSS cannot tell which item begins a wrapped row, so the separator would
+   appear at the start of every row after the first. When the bar wraps, spacing
+   carries the separation instead. */
+.rmb-menu.rmb-nav-plain.has-nav-wrap .rmb-nav-item + .rmb-nav-item::before {
+	content: none;
+}
+
+.rmb-menu.rmb-nav-plain.has-nav-wrap .rmb-nav-list {
+	gap: 2px 10px;
 }
 
 .rmb-menu.rmb-nav-plain .rmb-nav-item + .rmb-nav-item::before {
@@ -633,6 +666,29 @@
 @media (max-width: 782px) {
 	.rmb-menu {
 		--rmb-gap: 22px;
+	}
+
+	/* Stacking the icon above the label is too tall once the bar wraps onto
+	   several rows, so on a phone the icon moves beside the label. */
+	.rmb-menu.rmb-nav-icons .rmb-nav-link {
+		flex-direction: row;
+		gap: 7px;
+		padding: 8px 12px 6px;
+	}
+
+	.rmb-menu.rmb-nav-icons .rmb-nav-link .rmb-icon {
+		width: 20px;
+		height: 20px;
+		padding: 3px;
+	}
+
+	.rmb-menu .rmb-nav-link {
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+
+	.rmb-menu .rmb-nav-list {
+		gap: 4px;
 	}
 
 	.rmb-menu .rmb-items-two-column {

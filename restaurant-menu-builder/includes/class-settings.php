@@ -348,6 +348,13 @@ class Settings {
 					'right'  => __( 'Right', 'restaurant-menu-builder' ),
 				),
 			),
+			'nav_wrap'              => array(
+				'type'    => 'toggle',
+				'default' => true,
+				'group'   => 'navigation',
+				'label'   => __( 'Show every category', 'restaurant-menu-builder' ),
+				'help'    => __( 'Wraps the category bar onto as many lines as it needs. Turn this off to keep one line that scrolls sideways, which hides the categories that do not fit.', 'restaurant-menu-builder' ),
+			),
 			'nav_sticky'            => array(
 				'type'    => 'toggle',
 				'default' => true,

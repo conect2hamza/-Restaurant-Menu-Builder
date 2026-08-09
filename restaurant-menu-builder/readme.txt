@@ -4,7 +4,7 @@ Tags: restaurant, menu, food menu, digital menu, cafe
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,17 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 
 == Changelog ==
 
+= 1.3.1 =
+* The category bar now wraps onto as many lines as it needs, so every category
+  is visible on a phone or tablet. It previously sat on one line that scrolled
+  sideways, which left most categories off screen behind a scrollbar.
+* On phones the category icon moves beside its label rather than above it, so
+  a wrapped bar stays compact.
+* A pinned category bar with a very long list scrolls inside its own box
+  instead of filling the screen.
+* The single scrolling line is still available: turn off "Show every category"
+  under Navigation in the Style editor.
+
 = 1.3.0 =
 * Rebuilt the admin interface. The stylesheet is now scoped to a single class
   that sits on the page wrapper and on the dialog and toast roots, and every
@@ -198,6 +209,10 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 * Rendered menu caching with automatic invalidation.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+The category bar now wraps so every category shows on small screens. Existing
+menus pick this up automatically.
 
 = 1.3.0 =
 Rebuilds the admin interface so WordPress' own form styling can no longer
