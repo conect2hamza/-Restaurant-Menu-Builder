@@ -464,10 +464,21 @@
 		} );
 
 		// The picker lives inside the modal form, where Enter would otherwise
-		// submit the whole record while the user is still filtering icons.
+		// submit the whole record mid-search. Instead it picks the first icon
+		// still matching, which is what typing a name is usually aiming at.
 		search.addEventListener( 'keydown', function ( event ) {
-			if ( event.key === 'Enter' ) {
-				event.preventDefault();
+			if ( event.key !== 'Enter' ) {
+				return;
+			}
+
+			event.preventDefault();
+
+			var first = buttons.filter( function ( button ) {
+				return ! button.hidden;
+			} )[ 0 ];
+
+			if ( first ) {
+				first.click();
 			}
 		} );
 

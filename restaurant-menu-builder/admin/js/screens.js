@@ -671,68 +671,245 @@
 
 	/* ----------------------------------------------------------- Style editor */
 
+	/**
+	 * Grouped, typed style editor.
+	 *
+	 * Every control is built from the schema the server sends, so a setting
+	 * added in PHP appears here without touching this file.
+	 */
 	function StyleEditor( container, initial, onInput ) {
-		var values = Object.assign( {}, initial );
+		var values = Object.assign( {}, D.defaults.style, initial );
+		var groups = D.styleGroups || {};
+		var panels = {};
+		var tabButtons = [];
 
-		( D.styleFields || [] ).forEach( function ( definition ) {
-			var control;
+		function commit() {
+			onInput( values );
+		}
 
-			if ( definition.type === 'color' ) {
-				var colorInput = el( 'input', { type: 'color', class: 'rmb-color', value: values[ definition.key ] } );
-				var hexInput = el( 'input', { type: 'text', class: 'rmb-input rmb-input-hex', value: values[ definition.key ] } );
+		/* -------------------------------------------------------- Presets */
 
-				colorInput.addEventListener( 'input', function () {
-					values[ definition.key ] = colorInput.value;
-					hexInput.value = colorInput.value;
-					onInput( values );
-				} );
+		function presetButton( preset ) {
+			var swatches = el( 'span', { class: 'rmb-preset-swatches', 'aria-hidden': 'true' } );
 
-				hexInput.addEventListener( 'change', function () {
-					if ( ! /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test( hexInput.value.trim() ) ) {
-						hexInput.value = values[ definition.key ];
-						notify( __( 'Use a hex colour such as #1f2933.', 'restaurant-menu-builder' ), 'error' );
-						return;
+			( preset.swatches || [] ).forEach( function ( color ) {
+				var dot = el( 'span', { class: 'rmb-preset-swatch' } );
+				dot.style.background = color;
+				swatches.appendChild( dot );
+			} );
+
+			return el(
+				'button',
+				{
+					type: 'button',
+					class: 'rmb-preset',
+					'data-preset': preset.key,
+					onClick: function () {
+						// A preset fills every field; the editor is rebuilt so the
+						// controls show the new values, and the change is not saved
+						// until the user presses Save.
+						values = Object.assign( {}, D.defaults.style, preset.style );
+						rebuild();
+						commit();
+						notify(
+							sprintf(
+								/* translators: %s: preset name. */
+								__( '%s applied. Save to keep it.', 'restaurant-menu-builder' ),
+								preset.label
+							)
+						);
 					}
+				},
+				[ swatches, el( 'span', { class: 'rmb-preset-label', text: preset.label } ) ]
+			);
+		}
 
-					values[ definition.key ] = hexInput.value.trim().toLowerCase();
-					colorInput.value = values[ definition.key ];
-					onInput( values );
-				} );
-
-				control = el( 'div', { class: 'rmb-color-row' }, [ colorInput, hexInput ] );
-			} else {
-				var sizeInput = A.textInput( values[ definition.key ], '16px' );
-
-				sizeInput.addEventListener( 'change', function () {
-					values[ definition.key ] = sizeInput.value.trim();
-					onInput( values );
-				} );
-
-				control = sizeInput;
+		function presetsBlock() {
+			if ( ! ( D.presets || [] ).length ) {
+				return null;
 			}
 
-			var wrapper = el( 'div', { class: 'rmb-field' }, [
-				el( 'span', { class: 'rmb-field-label', text: definition.label } ),
-				control,
-				definition.help ? el( 'p', { class: 'rmb-field-help', text: definition.help } ) : null
+			var grid = el( 'div', { class: 'rmb-preset-grid' } );
+
+			D.presets.forEach( function ( preset ) {
+				grid.appendChild( presetButton( preset ) );
+			} );
+
+			return el( 'div', { class: 'rmb-style-presets' }, [
+				el( 'p', { class: 'rmb-field-label', text: __( 'Start from a look', 'restaurant-menu-builder' ) } ),
+				grid,
+				el( 'p', {
+					class: 'rmb-field-help',
+					text: __( 'A preset fills every control below. Adjust anything afterwards.', 'restaurant-menu-builder' )
+				} )
 			] );
+		}
 
-			container.appendChild( wrapper );
-		} );
+		/* -------------------------------------------------------- Controls */
 
-		var fontSelect = A.select(
-			Object.keys( D.fonts || {} ).map( function ( key ) {
-				return { value: key, label: D.fonts[ key ] };
-			} ),
-			values.font_family
-		);
+		function colorControl( definition ) {
+			var colorInput = el( 'input', { type: 'color', class: 'rmb-color', value: values[ definition.key ] } );
+			var hexInput = el( 'input', { type: 'text', class: 'rmb-input rmb-input-hex', value: values[ definition.key ] } );
 
-		fontSelect.addEventListener( 'change', function () {
-			values.font_family = fontSelect.value;
-			onInput( values );
-		} );
+			colorInput.addEventListener( 'input', function () {
+				values[ definition.key ] = colorInput.value;
+				hexInput.value = colorInput.value;
+				commit();
+			} );
 
-		container.appendChild( A.field( __( 'Font', 'restaurant-menu-builder' ), fontSelect ) );
+			hexInput.addEventListener( 'change', function () {
+				if ( ! /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test( hexInput.value.trim() ) ) {
+					hexInput.value = values[ definition.key ];
+					notify( __( 'Use a hex colour such as #1f2933.', 'restaurant-menu-builder' ), 'error' );
+					return;
+				}
+
+				values[ definition.key ] = hexInput.value.trim().toLowerCase();
+				colorInput.value = values[ definition.key ];
+				commit();
+			} );
+
+			return el( 'div', { class: 'rmb-color-row' }, [ colorInput, hexInput ] );
+		}
+
+		function selectControl( definition ) {
+			var choices = definition.choices || {};
+			var options = Object.keys( choices ).map( function ( key ) {
+				return { value: key, label: choices[ key ] };
+			} );
+
+			var select = A.select( options, values[ definition.key ] );
+
+			select.addEventListener( 'change', function () {
+				values[ definition.key ] = select.value;
+				commit();
+			} );
+
+			return select;
+		}
+
+		function toggleControl( definition ) {
+			var toggle = A.switchControl( definition.label, values[ definition.key ] );
+
+			toggle.input.addEventListener( 'change', function () {
+				values[ definition.key ] = toggle.input.checked;
+				commit();
+			} );
+
+			return toggle;
+		}
+
+		function sizeControl( definition ) {
+			var input = A.textInput( values[ definition.key ], '16px' );
+
+			input.addEventListener( 'change', function () {
+				values[ definition.key ] = input.value.trim();
+				commit();
+			} );
+
+			return input;
+		}
+
+		function controlFor( definition ) {
+			if ( definition.type === 'color' ) {
+				return colorControl( definition );
+			}
+
+			if ( definition.type === 'select' ) {
+				return selectControl( definition );
+			}
+
+			if ( definition.type === 'toggle' ) {
+				return toggleControl( definition );
+			}
+
+			return sizeControl( definition );
+		}
+
+		/* ---------------------------------------------------------- Build */
+
+		function rebuild() {
+			clear( container );
+			panels = {};
+			tabButtons = [];
+
+			var presets = presetsBlock();
+
+			if ( presets ) {
+				container.appendChild( presets );
+			}
+
+			var groupKeys = Object.keys( groups ).filter( function ( key ) {
+				return ( D.styleFields || [] ).some( function ( field ) {
+					return field.group === key;
+				} );
+			} );
+
+			var tabs = el( 'nav', { class: 'rmb-subtabs', role: 'tablist' } );
+
+			groupKeys.forEach( function ( key, index ) {
+				var button = el( 'button', {
+					type: 'button',
+					class: 'rmb-subtab' + ( index === 0 ? ' is-active' : '' ),
+					role: 'tab',
+					'aria-selected': index === 0 ? 'true' : 'false',
+					text: groups[ key ],
+					onClick: function () {
+						tabButtons.forEach( function ( other ) {
+							var active = other === button;
+							other.classList.toggle( 'is-active', active );
+							other.setAttribute( 'aria-selected', active ? 'true' : 'false' );
+						} );
+
+						groupKeys.forEach( function ( panelKey ) {
+							panels[ panelKey ].classList.toggle( 'is-active', panelKey === key );
+						} );
+					}
+				} );
+
+				tabButtons.push( button );
+				tabs.appendChild( button );
+
+				panels[ key ] = el( 'div', {
+					class: 'rmb-style-panel' + ( index === 0 ? ' is-active' : '' ),
+					role: 'tabpanel'
+				} );
+			} );
+
+			if ( groupKeys.length > 1 ) {
+				container.appendChild( tabs );
+			}
+
+			( D.styleFields || [] ).forEach( function ( definition ) {
+				var panel = panels[ definition.group ];
+
+				if ( ! panel ) {
+					return;
+				}
+
+				var control = controlFor( definition );
+
+				// A toggle already carries its own label text.
+				if ( definition.type === 'toggle' ) {
+					panel.appendChild(
+						el( 'div', { class: 'rmb-field' }, [
+							control,
+							definition.help ? el( 'p', { class: 'rmb-field-help', text: definition.help } ) : null
+						] )
+					);
+
+					return;
+				}
+
+				panel.appendChild( A.field( definition.label, control, definition.help ) );
+			} );
+
+			groupKeys.forEach( function ( key ) {
+				container.appendChild( panels[ key ] );
+			} );
+		}
+
+		rebuild();
 
 		return {
 			values: function () {
@@ -740,10 +917,11 @@
 			},
 			reset: function ( defaults ) {
 				values = Object.assign( {}, defaults );
-				clear( container );
-				var fresh = StyleEditor( container, values, onInput );
-				onInput( values );
-				return fresh;
+				rebuild();
+				commit();
+
+				// Rebuilding in place keeps the same instance valid.
+				return this;
 			}
 		};
 	}
@@ -1185,11 +1363,13 @@
 			var fields = el( 'div', { class: 'rmb-style-fields' } );
 
 			function syncLock() {
-				fields.classList.toggle( 'is-locked', controls.use_global_style.input.checked );
+				var locked = controls.use_global_style.input.checked;
+
+				fields.classList.toggle( 'is-locked', locked );
 				fields
-					.querySelectorAll( 'input, select' )
+					.querySelectorAll( 'input, select, button' )
 					.forEach( function ( control ) {
-						control.disabled = controls.use_global_style.input.checked;
+						control.disabled = locked;
 					} );
 			}
 
@@ -1202,6 +1382,7 @@
 			styleHost.appendChild( fields );
 
 			styleEditor = StyleEditor( fields, menu.settings.style, function () {
+				syncLock();
 				markDirty();
 			} );
 
@@ -1229,12 +1410,12 @@
 		load();
 
 		root.addEventListener( 'click', function ( event ) {
-			var tab = event.target.closest( '.rmb-tab' );
+			var tab = event.target.closest( '.rmb-tab[data-tab]' );
 
 			if ( tab ) {
 				var name = tab.getAttribute( 'data-tab' );
 
-				root.querySelectorAll( '.rmb-tab' ).forEach( function ( other ) {
+				root.querySelectorAll( '.rmb-tab[data-tab]' ).forEach( function ( other ) {
 					var active = other === tab;
 					other.classList.toggle( 'is-active', active );
 					other.setAttribute( 'aria-selected', active ? 'true' : 'false' );

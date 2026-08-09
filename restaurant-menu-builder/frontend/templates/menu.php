@@ -25,10 +25,15 @@ $rmb_instance   = $rmb['instance'];
 $rmb_layout     = (string) $rmb_context['layout'];
 $rmb_inline     = Style::inline_style( $rmb_context['style'] );
 $rmb_custom_css = (string) $rmb_context['custom_css'];
+
+$rmb_classes = array_merge(
+	array( 'rmb-menu', 'rmb-layout-' . sanitize_html_class( $rmb_layout ) ),
+	Style::wrapper_classes( $rmb_context['style'] )
+);
 ?>
 <div
 	id="<?php echo esc_attr( $rmb_instance ); ?>"
-	class="rmb-menu rmb-layout-<?php echo esc_attr( $rmb_layout ); ?>"
+	class="<?php echo esc_attr( implode( ' ', $rmb_classes ) ); ?>"
 	style="<?php echo esc_attr( $rmb_inline ); ?>"
 	data-rmb-menu="<?php echo esc_attr( (string) $rmb_menu['id'] ); ?>"
 >

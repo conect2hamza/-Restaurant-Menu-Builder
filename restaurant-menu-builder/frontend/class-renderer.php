@@ -213,7 +213,8 @@ class Renderer {
 				$was   = null === $variation['sale_price'] ? '' : Currency::format( $variation['price'], $currency, $position );
 
 				$parts[] = sprintf(
-					'<li class="rmb-price-variation"><span class="rmb-price-label">%1$s</span><span class="rmb-price-value">%2$s%3$s</span></li>',
+					'<li class="rmb-price-variation%1$s"><span class="rmb-price-label">%2$s</span><span class="rmb-price-value">%3$s%4$s</span></li>',
+					'' === $was ? '' : ' is-sale',
 					esc_html( $label ),
 					'' === $was ? '' : '<s class="rmb-price-was">' . esc_html( $was ) . '</s> ',
 					esc_html( $value )
@@ -239,18 +240,22 @@ class Renderer {
 		}
 
 		$html = '';
+		$sale = '';
 
 		if ( null !== $item['sale_price'] ) {
 			$was = Currency::format( $item['price'], $currency, $position );
 
 			if ( '' !== $was ) {
+				// A class rather than a :has() selector, so the discounted colour
+				// works in every browser the plugin supports.
+				$sale  = ' is-sale';
 				$html .= '<s class="rmb-price-was">' . esc_html( $was ) . '</s> ';
 			}
 		}
 
 		$html .= '<span class="rmb-price-value">' . esc_html( $value ) . '</span>';
 
-		return '<p class="rmb-price">' . $html . '</p>';
+		return '<p class="rmb-price' . $sale . '">' . $html . '</p>';
 	}
 
 	/**

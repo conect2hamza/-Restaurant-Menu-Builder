@@ -131,6 +131,8 @@ $rmb_menus = Menu::all( array( 'per_page' => 20 ) );
 				</thead>
 				<tbody>
 					<tr><td><code>rmb_layouts</code></td><td><?php esc_html_e( 'Register another layout.', 'restaurant-menu-builder' ); ?></td></tr>
+					<tr><td><code>rmb_style_schema</code></td><td><?php esc_html_e( 'Add a style setting. Give it a type, default, group and label and it is sanitized, saved and rendered in the Style editor for you.', 'restaurant-menu-builder' ); ?></td></tr>
+					<tr><td><code>rmb_style_presets</code></td><td><?php esc_html_e( 'Add a ready made look to the preset row.', 'restaurant-menu-builder' ); ?></td></tr>
 					<tr><td><code>rmb_currencies</code></td><td><?php esc_html_e( 'Add a currency.', 'restaurant-menu-builder' ); ?></td></tr>
 					<tr><td><code>rmb_icons</code></td><td><?php esc_html_e( 'Add a category icon. Supply label, group and a paths array of SVG path data drawn on a 24x24 grid.', 'restaurant-menu-builder' ); ?></td></tr>
 					<tr><td><code>rmb_render_context</code></td><td><?php esc_html_e( 'Change display options before a menu renders.', 'restaurant-menu-builder' ); ?></td></tr>

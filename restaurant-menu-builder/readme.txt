@@ -4,7 +4,7 @@ Tags: restaurant, menu, food menu, digital menu, cafe
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,31 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 
 == Changelog ==
 
+= 1.2.0 =
+* Customisation is now schema driven: 38 style settings, up from 12. A setting
+  is described once in PHP and its default, sanitizer, CSS custom property and
+  admin control all follow from that.
+* Six ready made looks — Classic, Modern, Elegant, Minimal, Bistro and
+  Midnight. Applying one fills every control, which you can then adjust.
+* New colours: card background, price, sale price and badge text.
+* New typography: a separate heading font, heading weight, section title case,
+  letter spacing, line height and optional italic descriptions.
+* New layout controls: maximum width, corner rounding, space between sections
+  and items, section header alignment, card column count, image shape
+  (including circle), thumbnail width and position, price leader style
+  (dotted, solid or none) and an optional separator between items.
+* New navigation controls: four navigation styles (icon above the name,
+  pills, underline, plain text), alignment, sticky behaviour, optional icons
+  and an optional rule underneath.
+* The Style editor is now grouped into Colours, Typography, Layout and
+  Navigation tabs instead of one long list.
+* Both new filters, rmb_style_schema and rmb_style_presets, let a theme add
+  its own settings and looks.
+* Sale prices now carry an explicit class rather than relying on the CSS
+  :has() selector, so the discounted colour works in every supported browser.
+* Category and Menu updates now pair database formats by column name, the same
+  guard applied to items in 1.1.0.
+
 = 1.1.0 =
 * New icon pack: 85 hand drawn line-art food and restaurant icons, grouped into
   mains, seafood, fruit and vegetables, desserts, drinks, pantry and tools,
@@ -146,6 +171,10 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 * Rendered menu caching with automatic invalidation.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Adds the full customisation system and six presets. Existing styles are kept
+and the new settings start at their defaults. No database change is required.
 
 = 1.1.0 =
 Adds the full icon pack, the dashboard and the refreshed admin interface.

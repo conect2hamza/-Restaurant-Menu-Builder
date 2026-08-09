@@ -158,8 +158,8 @@ class Category {
 			return new \WP_Error( 'rmb_category_missing', __( 'That category no longer exists.', 'restaurant-menu-builder' ), array( 'status' => 404 ) );
 		}
 
-		$data   = array();
-		$format = array();
+		$data    = array();
+		$formats = array();
 
 		if ( array_key_exists( 'name', $input ) ) {
 			$name = sanitize_text_field( (string) $input['name'] );
@@ -168,37 +168,45 @@ class Category {
 				return new \WP_Error( 'rmb_category_name_required', __( 'Enter a category name.', 'restaurant-menu-builder' ), array( 'status' => 400 ) );
 			}
 
-			$data['name'] = substr( $name, 0, 191 );
-			$format[]     = '%s';
+			$data['name']    = substr( $name, 0, 191 );
+			$formats['name'] = '%s';
 		}
 
 		if ( array_key_exists( 'description', $input ) ) {
-			$data['description'] = sanitize_textarea_field( (string) $input['description'] );
-			$format[]            = '%s';
+			$data['description']    = sanitize_textarea_field( (string) $input['description'] );
+			$formats['description'] = '%s';
 		}
 
 		if ( array_key_exists( 'icon', $input ) ) {
-			$data['icon'] = Icons::sanitize( (string) $input['icon'] );
-			$format[]     = '%s';
+			$data['icon']    = Icons::sanitize( (string) $input['icon'] );
+			$formats['icon'] = '%s';
 		}
 
 		if ( array_key_exists( 'image_id', $input ) ) {
-			$data['image_id'] = self::sanitize_image_id( $input['image_id'] );
-			$format[]         = '%d';
+			$data['image_id']    = self::sanitize_image_id( $input['image_id'] );
+			$formats['image_id'] = '%d';
 		}
 
 		if ( array_key_exists( 'status', $input ) ) {
-			$data['status'] = sanitize_status( $input['status'] );
-			$format[]       = '%s';
+			$data['status']    = sanitize_status( $input['status'] );
+			$formats['status'] = '%s';
 		}
 
 		if ( array_key_exists( 'sort_order', $input ) ) {
-			$data['sort_order'] = absint( $input['sort_order'] );
-			$format[]           = '%d';
+			$data['sort_order']    = absint( $input['sort_order'] );
+			$formats['sort_order'] = '%d';
 		}
 
 		if ( empty( $data ) ) {
 			return true;
+		}
+
+		// Formats are keyed by column and only flattened here, so a column set
+		// by more than one branch can never shift the remaining formats.
+		$format = array();
+
+		foreach ( array_keys( $data ) as $column ) {
+			$format[] = $formats[ $column ];
 		}
 
 		if ( ! Database::update( Database::CATEGORIES, $id, $data, $format ) ) {

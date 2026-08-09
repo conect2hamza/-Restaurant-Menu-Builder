@@ -1193,6 +1193,115 @@
 	width: 100%;
 }
 
+/* -------------------------------------------------------- Style editor */
+
+.rmb-style-presets {
+	border-bottom: 1px solid var(--rmb-a-line);
+	margin-bottom: 14px;
+	padding-bottom: 14px;
+}
+
+.rmb-preset-grid {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+}
+
+.rmb-preset {
+	align-items: center;
+	background: var(--rmb-a-surface);
+	border: 1px solid var(--rmb-a-line);
+	border-radius: 10px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	padding: 10px 8px;
+	transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.rmb-preset:hover {
+	background: var(--rmb-a-brand-soft);
+	border-color: var(--rmb-a-brand-line);
+}
+
+.rmb-preset:focus-visible {
+	outline: 2px solid var(--rmb-a-brand);
+	outline-offset: 1px;
+}
+
+.rmb-preset[disabled] {
+	cursor: not-allowed;
+	opacity: 0.55;
+}
+
+.rmb-preset-swatches {
+	border: 1px solid var(--rmb-a-line);
+	border-radius: 6px;
+	display: flex;
+	height: 26px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.rmb-preset-swatch {
+	flex: 1 1 auto;
+}
+
+.rmb-preset-label {
+	color: var(--rmb-a-ink-soft);
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* Second level tabs, used to group the style controls. They deliberately do
+   not reuse .rmb-tab, whose delegated handler drives the editor's own tabs. */
+.rmb-subtabs {
+	border-bottom: 1px solid var(--rmb-a-line);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+	margin-bottom: 14px;
+}
+
+.rmb-subtab {
+	background: none;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	color: var(--rmb-a-muted);
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: -1px;
+	padding: 8px 10px;
+}
+
+.rmb-subtab:hover {
+	color: var(--rmb-a-ink);
+}
+
+.rmb-subtab.is-active {
+	border-bottom-color: var(--rmb-a-brand);
+	color: var(--rmb-a-brand-dark);
+}
+
+.rmb-subtab:focus-visible {
+	outline: 2px solid var(--rmb-a-brand);
+}
+
+.rmb-subtab[disabled] {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.rmb-style-panel {
+	display: none;
+}
+
+.rmb-style-panel.is-active {
+	display: block;
+}
+
 /* --------------------------------------------------------------------- Modal */
 
 .rmb-modal-backdrop {

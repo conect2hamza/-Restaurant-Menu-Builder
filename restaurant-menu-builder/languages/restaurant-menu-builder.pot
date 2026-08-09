@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Restaurant Menu Builder 1.1.0\n"
+"Project-Id-Version: Restaurant Menu Builder 1.2.0\n"
 "Report-Msgid-Bugs-To: https://hamzadezinr.com/support\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Add New"
 msgstr ""
 
-#: admin/class-admin.php:103 admin/class-admin.php:104 admin/js/screens.js:1005 admin/views/categories.php:23 admin/views/menu-editor.php:61
+#: admin/class-admin.php:103 admin/class-admin.php:104 admin/js/screens.js:1183 admin/views/categories.php:23 admin/views/menu-editor.php:61
 msgid "Categories"
 msgstr ""
 
-#: admin/class-admin.php:112 admin/class-admin.php:113 admin/js/screens.js:1004
+#: admin/class-admin.php:112 admin/class-admin.php:113 admin/js/screens.js:1182
 msgid "Items"
 msgstr ""
 
@@ -53,103 +53,35 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: admin/class-admin.php:259
-msgid "Primary"
-msgstr ""
-
-#: admin/class-admin.php:261
-msgid "Section titles and item names."
-msgstr ""
-
-#: admin/class-admin.php:265
-msgid "Accent"
-msgstr ""
-
-#: admin/class-admin.php:267
-msgid "Rules, focus outlines and highlights."
-msgstr ""
-
-#: admin/class-admin.php:271
-msgid "Text"
-msgstr ""
-
-#: admin/class-admin.php:277
-msgid "Secondary text"
-msgstr ""
-
-#: admin/class-admin.php:279
-msgid "Descriptions and price labels."
-msgstr ""
-
-#: admin/class-admin.php:283
-msgid "Background"
-msgstr ""
-
-#: admin/class-admin.php:289
-msgid "Border"
-msgstr ""
-
-#: admin/class-admin.php:291
-msgid "Category pills, cards and the dotted price leader."
-msgstr ""
-
-#: admin/class-admin.php:295
-msgid "Active category"
-msgstr ""
-
-#: admin/class-admin.php:297
-msgid "Fill of the selected category pill."
-msgstr ""
-
-#: admin/class-admin.php:301
-msgid "Category heading size"
-msgstr ""
-
-#: admin/class-admin.php:303
-msgid "Use a CSS length, for example 30px or 2rem."
-msgstr ""
-
-#: admin/class-admin.php:307
-msgid "Body size"
-msgstr ""
-
-#: admin/class-admin.php:313
-msgid "Category navigation size"
-msgstr ""
-
-#: admin/class-admin.php:319
-msgid "Price size"
-msgstr ""
-
-#: admin/class-admin.php:449 includes/class-rest-api.php:53
+#: admin/class-admin.php:432 includes/class-rest-api.php:53
 msgid "You do not have permission to manage restaurant menus."
 msgstr ""
 
-#: admin/class-admin.php:507
+#: admin/class-admin.php:490
 msgid "Restaurant Menu Builder could not find its database tables. Deactivate and reactivate the plugin to create them."
 msgstr ""
 
-#: admin/class-admin.php:522
+#: admin/class-admin.php:505
 msgid "Menus"
 msgstr ""
 
-#: admin/class-admin.php:570 admin/js/screens.js:1002
+#: admin/class-admin.php:553 admin/js/screens.js:1180
 msgid "Menu"
 msgstr ""
 
-#: admin/class-admin.php:583
+#: admin/class-admin.php:566
 msgid "Switch menu"
 msgstr ""
 
-#: admin/class-admin.php:594
+#: admin/class-admin.php:577
 msgid "No menus yet"
 msgstr ""
 
-#: admin/class-admin.php:595
+#: admin/class-admin.php:578
 msgid "Create your first menu, then add categories and dishes to it."
 msgstr ""
 
-#: admin/class-admin.php:599
+#: admin/class-admin.php:582
 msgid "Create a menu"
 msgstr ""
 
@@ -185,47 +117,47 @@ msgstr ""
 msgid "Search icons"
 msgstr ""
 
-#: admin/js/admin.js:475
+#: admin/js/admin.js:486
 msgid "No icon matches that search."
 msgstr ""
 
-#: admin/js/admin.js:483
+#: admin/js/admin.js:494
 msgid "No icon"
 msgstr ""
 
-#: admin/js/admin.js:572
+#: admin/js/admin.js:583
 msgid "Clear"
 msgstr ""
 
-#: admin/js/admin.js:604
+#: admin/js/admin.js:615
 msgid "Remove"
 msgstr ""
 
-#: admin/js/admin.js:615 admin/js/admin.js:652
+#: admin/js/admin.js:626 admin/js/admin.js:663
 msgid "Choose image"
 msgstr ""
 
-#: admin/js/admin.js:618
+#: admin/js/admin.js:629
 msgid "The media library is unavailable on this screen."
 msgstr ""
 
-#: admin/js/admin.js:623
+#: admin/js/admin.js:634
 msgid "Choose an image"
 msgstr ""
 
-#: admin/js/admin.js:624
+#: admin/js/admin.js:635
 msgid "Use this image"
 msgstr ""
 
-#: admin/js/admin.js:648
+#: admin/js/admin.js:659
 msgid "Change image"
 msgstr ""
 
-#: admin/js/screens.js:33 admin/js/screens.js:129 admin/js/screens.js:323 admin/js/screens.js:880 admin/js/screens.js:1129 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:44
+#: admin/js/screens.js:33 admin/js/screens.js:129 admin/js/screens.js:323 admin/js/screens.js:1058 admin/js/screens.js:1307 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:44
 msgid "Active"
 msgstr ""
 
-#: admin/js/screens.js:33 admin/js/screens.js:881 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:45
+#: admin/js/screens.js:33 admin/js/screens.js:1059 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:45
 msgid "Draft"
 msgstr ""
 
@@ -249,7 +181,7 @@ msgstr ""
 msgid "Shown under the category title"
 msgstr ""
 
-#: admin/js/screens.js:130 admin/js/screens.js:324 admin/js/screens.js:1130
+#: admin/js/screens.js:130 admin/js/screens.js:324 admin/js/screens.js:1308
 msgid "Draft — hidden from visitors"
 msgstr ""
 
@@ -273,7 +205,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: admin/js/screens.js:150 admin/js/screens.js:341 admin/js/screens.js:822 admin/js/screens.js:1006 admin/js/screens.js:1162
+#: admin/js/screens.js:150 admin/js/screens.js:341 admin/js/screens.js:1000 admin/js/screens.js:1184 admin/js/screens.js:1340
 msgid "Status"
 msgstr ""
 
@@ -325,11 +257,11 @@ msgstr ""
 msgid "Several sizes"
 msgstr ""
 
-#: admin/js/screens.js:269 admin/js/screens.js:305
+#: admin/js/screens.js:269 admin/js/screens.js:305 includes/class-settings.php:126
 msgid "Price"
 msgstr ""
 
-#: admin/js/screens.js:271 admin/js/screens.js:306
+#: admin/js/screens.js:271 admin/js/screens.js:306 includes/class-settings.php:132
 msgid "Sale price"
 msgstr ""
 
@@ -440,177 +372,186 @@ msgstr ""
 msgid "Add a category before adding items."
 msgstr ""
 
-#: admin/js/screens.js:693
+#. translators: %s: preset name.
+#: admin/js/screens.js:717
+msgid "%s applied. Save to keep it."
+msgstr ""
+
+#: admin/js/screens.js:739
+msgid "Start from a look"
+msgstr ""
+
+#: admin/js/screens.js:743
+msgid "A preset fills every control below. Adjust anything afterwards."
+msgstr ""
+
+#: admin/js/screens.js:763
 msgid "Use a hex colour such as #1f2933."
 msgstr ""
 
-#: admin/js/screens.js:735
-msgid "Font"
-msgstr ""
-
-#: admin/js/screens.js:808
+#: admin/js/screens.js:986
 msgid "Main menu"
 msgstr ""
 
-#: admin/js/screens.js:811
+#: admin/js/screens.js:989
 msgid "Draft — build it privately first"
 msgstr ""
 
-#: admin/js/screens.js:812
+#: admin/js/screens.js:990
 msgid "Active — visible wherever the shortcode is placed"
 msgstr ""
 
-#: admin/js/screens.js:818
+#: admin/js/screens.js:996
 msgid "Add a menu"
 msgstr ""
 
-#: admin/js/screens.js:819
+#: admin/js/screens.js:997
 msgid "Create menu"
 msgstr ""
 
-#: admin/js/screens.js:821 admin/js/screens.js:1158
+#: admin/js/screens.js:999 admin/js/screens.js:1336
 msgid "Menu name"
 msgstr ""
 
-#: admin/js/screens.js:828 includes/class-menu.php:198 includes/class-menu.php:253
+#: admin/js/screens.js:1006 includes/class-menu.php:198 includes/class-menu.php:253
 msgid "Enter a menu name."
 msgstr ""
 
-#: admin/js/screens.js:871 admin/views/dashboard.php:183
+#: admin/js/screens.js:1049 admin/views/dashboard.php:183
 msgid "Copy shortcode"
 msgstr ""
 
-#: admin/js/screens.js:887
+#: admin/js/screens.js:1065
 msgid "Status of %s"
 msgstr ""
 
-#: admin/js/screens.js:919
+#: admin/js/screens.js:1097
 msgid "Edit %s"
 msgstr ""
 
-#: admin/js/screens.js:920
+#: admin/js/screens.js:1098
 msgid "Edit menu"
 msgstr ""
 
-#: admin/js/screens.js:924
+#: admin/js/screens.js:1102
 msgid "Duplicate menu"
 msgstr ""
 
-#: admin/js/screens.js:934 admin/js/screens.js:949
+#: admin/js/screens.js:1112 admin/js/screens.js:1127
 msgid "Delete menu"
 msgstr ""
 
-#: admin/js/screens.js:937
+#: admin/js/screens.js:1115
 msgid "Delete this menu?"
 msgstr ""
 
 #. translators: %s: menu name.
-#: admin/js/screens.js:940
+#: admin/js/screens.js:1118
 msgid "“%s” will be removed permanently."
 msgstr ""
 
 #. translators: 1: category count, 2: item count.
-#: admin/js/screens.js:945
+#: admin/js/screens.js:1123
 msgid "%1$d categories and %2$d items will be deleted with it."
 msgstr ""
 
-#: admin/js/screens.js:988
+#: admin/js/screens.js:1166
 msgid "No menus found"
 msgstr ""
 
-#: admin/js/screens.js:989
+#: admin/js/screens.js:1167
 msgid "Create a menu to start adding categories and dishes."
 msgstr ""
 
-#: admin/js/screens.js:990 admin/views/menus.php:51
+#: admin/js/screens.js:1168 admin/views/menus.php:51
 msgid "Add new menu"
 msgstr ""
 
-#: admin/js/screens.js:1003
+#: admin/js/screens.js:1181
 msgid "Shortcode"
 msgstr ""
 
-#: admin/js/screens.js:1007
+#: admin/js/screens.js:1185
 msgid "Actions"
 msgstr ""
 
-#: admin/js/screens.js:1053
+#: admin/js/screens.js:1231
 msgid "Shortcode copied."
 msgstr ""
 
-#: admin/js/screens.js:1056 admin/js/screens.js:1062
+#: admin/js/screens.js:1234 admin/js/screens.js:1240
 msgid "Copy the shortcode manually: "
 msgstr ""
 
-#: admin/js/screens.js:1142 admin/views/settings.php:105
+#: admin/js/screens.js:1320 admin/views/settings.php:105
 msgid "Show category navigation"
 msgstr ""
 
-#: admin/js/screens.js:1143 admin/views/settings.php:106
+#: admin/js/screens.js:1321 admin/views/settings.php:106
 msgid "Show images"
 msgstr ""
 
-#: admin/js/screens.js:1144 admin/views/settings.php:107
+#: admin/js/screens.js:1322 admin/views/settings.php:107
 msgid "Show descriptions"
 msgstr ""
 
-#: admin/js/screens.js:1145 admin/views/settings.php:108
+#: admin/js/screens.js:1323 admin/views/settings.php:108
 msgid "Show prices"
 msgstr ""
 
-#: admin/js/screens.js:1160
+#: admin/js/screens.js:1338
 msgid "Slug"
 msgstr ""
 
-#: admin/js/screens.js:1160
+#: admin/js/screens.js:1338
 msgid "Used by [restaurant_menu slug=\"…\"]."
 msgstr ""
 
-#: admin/js/screens.js:1163 admin/views/settings.php:93
+#: admin/js/screens.js:1341 admin/views/settings.php:93 includes/class-settings.php:392
 msgid "Layout"
 msgstr ""
 
-#: admin/js/screens.js:1170
+#: admin/js/screens.js:1348
 msgid "Custom CSS for this menu"
 msgstr ""
 
-#: admin/js/screens.js:1172
+#: admin/js/screens.js:1350
 msgid "Applies to this menu only."
 msgstr ""
 
-#: admin/js/screens.js:1181
+#: admin/js/screens.js:1359
 msgid "Use the global style from Restaurant Menu → Style"
 msgstr ""
 
-#: admin/js/screens.js:1266
+#: admin/js/screens.js:1447
 msgid "Show preview"
 msgstr ""
 
-#: admin/js/screens.js:1267 admin/views/menu-editor.php:43
+#: admin/js/screens.js:1448 admin/views/menu-editor.php:43
 msgid "Hide preview"
 msgstr ""
 
-#: admin/js/screens.js:1414
+#: admin/js/screens.js:1595
 msgid "Restore the default style?"
 msgstr ""
 
-#: admin/js/screens.js:1415
+#: admin/js/screens.js:1596
 msgid "Colours, sizes and the font go back to the plugin defaults."
 msgstr ""
 
-#: admin/js/screens.js:1416 admin/js/screens.js:1482 admin/views/style.php:32
+#: admin/js/screens.js:1597 admin/js/screens.js:1663 admin/views/style.php:32
 msgid "Restore defaults"
 msgstr ""
 
-#: admin/js/screens.js:1479
+#: admin/js/screens.js:1660
 msgid "Restore default settings?"
 msgstr ""
 
-#: admin/js/screens.js:1480
+#: admin/js/screens.js:1661
 msgid "Currency, display options and custom CSS go back to their defaults."
 msgstr ""
 
-#: admin/js/screens.js:1481
+#: admin/js/screens.js:1662
 msgid "Your menus, categories and items are not touched."
 msgstr ""
 
@@ -838,22 +779,30 @@ msgid "Register another layout."
 msgstr ""
 
 #: admin/views/help.php:134
-msgid "Add a currency."
+msgid "Add a style setting. Give it a type, default, group and label and it is sanitized, saved and rendered in the Style editor for you."
 msgstr ""
 
 #: admin/views/help.php:135
-msgid "Add a category icon. Supply label, group and a paths array of SVG path data drawn on a 24x24 grid."
+msgid "Add a ready made look to the preset row."
 msgstr ""
 
 #: admin/views/help.php:136
-msgid "Change display options before a menu renders."
+msgid "Add a currency."
 msgstr ""
 
 #: admin/views/help.php:137
-msgid "Change who can manage menus."
+msgid "Add a category icon. Supply label, group and a paths array of SVG path data drawn on a 24x24 grid."
 msgstr ""
 
 #: admin/views/help.php:138
+msgid "Change display options before a menu renders."
+msgstr ""
+
+#: admin/views/help.php:139
+msgid "Change who can manage menus."
+msgstr ""
+
+#: admin/views/help.php:140
 msgid "Force the menu CSS and JS to load on a template you render yourself."
 msgstr ""
 
@@ -981,7 +930,7 @@ msgstr ""
 msgid "Default menu"
 msgstr ""
 
-#: admin/views/settings.php:59
+#: admin/views/settings.php:59 includes/class-settings.php:316
 msgid "None"
 msgstr ""
 
@@ -1085,7 +1034,7 @@ msgstr ""
 msgid "This menu has no categories yet."
 msgstr ""
 
-#: frontend/templates/menu.php:46
+#: frontend/templates/menu.php:51
 msgid "Menu categories"
 msgstr ""
 
@@ -1093,23 +1042,23 @@ msgstr ""
 msgid "Choose a menu for this category."
 msgstr ""
 
-#: includes/class-category.php:139 includes/class-category.php:205
+#: includes/class-category.php:139 includes/class-category.php:213
 msgid "Unable to save the category. Please try again."
 msgstr ""
 
-#: includes/class-category.php:158 includes/class-category.php:223 includes/class-category.php:251
+#: includes/class-category.php:158 includes/class-category.php:231 includes/class-category.php:259
 msgid "That category no longer exists."
 msgstr ""
 
-#: includes/class-category.php:233
+#: includes/class-category.php:241
 msgid "Unable to delete the category. Please try again."
 msgstr ""
 
-#: includes/class-category.php:257
+#: includes/class-category.php:265
 msgid "Unable to duplicate the category. Please try again."
 msgstr ""
 
-#: includes/class-category.php:306 includes/class-item.php:431
+#: includes/class-category.php:314 includes/class-item.php:431
 msgid "Unable to save the new order. Please reload the page and try again."
 msgstr ""
 
@@ -1546,19 +1495,19 @@ msgstr ""
 msgid "Unable to duplicate the item. Please try again."
 msgstr ""
 
-#: includes/class-menu.php:217 includes/class-menu.php:284
+#: includes/class-menu.php:217 includes/class-menu.php:292
 msgid "Unable to save the menu. Please try again."
 msgstr ""
 
-#: includes/class-menu.php:243 includes/class-menu.php:311 includes/class-menu.php:352 includes/class-rest-api.php:329 includes/class-rest-api.php:428 includes/class-rest-api.php:457
+#: includes/class-menu.php:243 includes/class-menu.php:319 includes/class-menu.php:360 includes/class-rest-api.php:329 includes/class-rest-api.php:428 includes/class-rest-api.php:457
 msgid "That menu no longer exists."
 msgstr ""
 
-#: includes/class-menu.php:323
+#: includes/class-menu.php:331
 msgid "Unable to delete the menu. Please try again."
 msgstr ""
 
-#: includes/class-menu.php:367
+#: includes/class-menu.php:375
 msgid "Unable to duplicate the menu. Please try again."
 msgstr ""
 
@@ -1626,43 +1575,379 @@ msgstr ""
 msgid "Menu cache cleared."
 msgstr ""
 
+#: includes/class-settings.php:75
+msgid "Headings & item names"
+msgstr ""
+
+#: includes/class-settings.php:81
+msgid "Accent"
+msgstr ""
+
+#: includes/class-settings.php:82
+msgid "Rules under section titles, the active category and focus outlines."
+msgstr ""
+
+#: includes/class-settings.php:88
+msgid "Body text"
+msgstr ""
+
+#: includes/class-settings.php:94
+msgid "Secondary text"
+msgstr ""
+
+#: includes/class-settings.php:95
+msgid "Descriptions, size labels and inactive categories."
+msgstr ""
+
 #: includes/class-settings.php:101
-msgid "Inherit from theme"
-msgstr ""
-
-#: includes/class-settings.php:102
-msgid "System sans-serif"
-msgstr ""
-
-#: includes/class-settings.php:103
-msgid "Classic serif"
-msgstr ""
-
-#: includes/class-settings.php:104
-msgid "Slab serif"
-msgstr ""
-
-#: includes/class-settings.php:105
-msgid "Humanist sans-serif"
-msgstr ""
-
-#: includes/class-settings.php:106
-msgid "Geometric sans-serif"
+msgid "Background"
 msgstr ""
 
 #: includes/class-settings.php:107
-msgid "Monospace"
+msgid "Card background"
 msgstr ""
 
-#: includes/class-settings.php:128
+#: includes/class-settings.php:108
+msgid "Used by the card layout and the category icon badges."
+msgstr ""
+
+#: includes/class-settings.php:114
+msgid "Borders"
+msgstr ""
+
+#: includes/class-settings.php:120
+msgid "Active category"
+msgstr ""
+
+#: includes/class-settings.php:133
+msgid "The discounted figure; the original is shown struck through."
+msgstr ""
+
+#: includes/class-settings.php:139
+msgid "Badge text"
+msgstr ""
+
+#: includes/class-settings.php:148
+msgid "Body font"
+msgstr ""
+
+#: includes/class-settings.php:154
+msgid "Heading font"
+msgstr ""
+
+#: includes/class-settings.php:155
+msgid "Section titles and item names."
+msgstr ""
+
+#: includes/class-settings.php:161
+msgid "Section title size"
+msgstr ""
+
+#: includes/class-settings.php:162
+msgid "A CSS length such as 30px or 2rem."
+msgstr ""
+
+#: includes/class-settings.php:168
+msgid "Body size"
+msgstr ""
+
+#: includes/class-settings.php:174
+msgid "Category navigation size"
+msgstr ""
+
+#: includes/class-settings.php:180
+msgid "Price size"
+msgstr ""
+
+#: includes/class-settings.php:186
+msgid "Heading weight"
+msgstr ""
+
+#: includes/class-settings.php:188
+msgid "Regular"
+msgstr ""
+
+#: includes/class-settings.php:189
+msgid "Medium"
+msgstr ""
+
+#: includes/class-settings.php:190
+msgid "Semi bold"
+msgstr ""
+
+#: includes/class-settings.php:191
+msgid "Bold"
+msgstr ""
+
+#: includes/class-settings.php:192
+msgid "Extra bold"
+msgstr ""
+
+#: includes/class-settings.php:199
+msgid "Section title case"
+msgstr ""
+
+#: includes/class-settings.php:201
+msgid "As typed"
+msgstr ""
+
+#: includes/class-settings.php:202
+msgid "UPPERCASE"
+msgstr ""
+
+#: includes/class-settings.php:203
+msgid "Capitalised"
+msgstr ""
+
+#: includes/class-settings.php:210
+msgid "Section title letter spacing"
+msgstr ""
+
+#: includes/class-settings.php:211
+msgid "Try 0.06em for a spaced, printed look, or 0 for none."
+msgstr ""
+
+#: includes/class-settings.php:217
+msgid "Line height"
+msgstr ""
+
+#: includes/class-settings.php:218
+msgid "A plain number, such as 1.55."
+msgstr ""
+
+#: includes/class-settings.php:224
+msgid "Italic descriptions"
+msgstr ""
+
+#: includes/class-settings.php:233
+msgid "Maximum width"
+msgstr ""
+
+#: includes/class-settings.php:234
+msgid "Constrain the menu inside a wide theme, for example 1080px."
+msgstr ""
+
+#: includes/class-settings.php:240
+msgid "Corner rounding"
+msgstr ""
+
+#: includes/class-settings.php:246
+msgid "Space between sections"
+msgstr ""
+
+#: includes/class-settings.php:252
+msgid "Space between items"
+msgstr ""
+
+#: includes/class-settings.php:258
+msgid "Section header alignment"
+msgstr ""
+
+#: includes/class-settings.php:260 includes/class-settings.php:346
+msgid "Left"
+msgstr ""
+
+#: includes/class-settings.php:261 includes/class-settings.php:347
+msgid "Centred"
+msgstr ""
+
+#: includes/class-settings.php:268
+msgid "Card columns"
+msgstr ""
+
+#: includes/class-settings.php:269
+msgid "Only affects the card layout. Automatic fits as many as the width allows."
+msgstr ""
+
+#: includes/class-settings.php:271
+msgid "Automatic"
+msgstr ""
+
+#: includes/class-settings.php:272
+msgid "Two"
+msgstr ""
+
+#: includes/class-settings.php:273
+msgid "Three"
+msgstr ""
+
+#: includes/class-settings.php:274
+msgid "Four"
+msgstr ""
+
+#: includes/class-settings.php:281
+msgid "Image shape"
+msgstr ""
+
+#: includes/class-settings.php:283
+msgid "Original proportions"
+msgstr ""
+
+#: includes/class-settings.php:284
+msgid "Square"
+msgstr ""
+
+#: includes/class-settings.php:285
+msgid "Landscape 4:3"
+msgstr ""
+
+#: includes/class-settings.php:286
+msgid "Wide 16:9"
+msgstr ""
+
+#: includes/class-settings.php:287
+msgid "Circle"
+msgstr ""
+
+#: includes/class-settings.php:294
+msgid "Thumbnail width"
+msgstr ""
+
+#: includes/class-settings.php:295
+msgid "Used by the classic and two column layouts."
+msgstr ""
+
+#: includes/class-settings.php:301
+msgid "Thumbnail position"
+msgstr ""
+
+#: includes/class-settings.php:303
+msgid "Before the text"
+msgstr ""
+
+#: includes/class-settings.php:304
+msgid "After the text"
+msgstr ""
+
+#: includes/class-settings.php:311
+msgid "Price leader"
+msgstr ""
+
+#: includes/class-settings.php:312
+msgid "The line that carries the eye from a dish to its price."
+msgstr ""
+
+#: includes/class-settings.php:314
+msgid "Dotted"
+msgstr ""
+
+#: includes/class-settings.php:315
+msgid "Solid rule"
+msgstr ""
+
+#: includes/class-settings.php:323
+msgid "Separator line between items"
+msgstr ""
+
+#: includes/class-settings.php:332
+msgid "Navigation style"
+msgstr ""
+
+#: includes/class-settings.php:334
+msgid "Icon above the name"
+msgstr ""
+
+#: includes/class-settings.php:335
+msgid "Rounded pills"
+msgstr ""
+
+#: includes/class-settings.php:336
+msgid "Underlined text"
+msgstr ""
+
+#: includes/class-settings.php:337
+msgid "Plain text"
+msgstr ""
+
+#: includes/class-settings.php:344
+msgid "Navigation alignment"
+msgstr ""
+
+#: includes/class-settings.php:348
+msgid "Right"
+msgstr ""
+
+#: includes/class-settings.php:355
+msgid "Keep the category bar visible while scrolling"
+msgstr ""
+
+#: includes/class-settings.php:361
+msgid "Show category icons"
+msgstr ""
+
+#: includes/class-settings.php:367
+msgid "Rule under the category bar"
+msgstr ""
+
+#: includes/class-settings.php:390
+msgid "Colours"
+msgstr ""
+
+#: includes/class-settings.php:391
+msgid "Typography"
+msgstr ""
+
+#: includes/class-settings.php:393
+msgid "Navigation"
+msgstr ""
+
+#: includes/class-settings.php:407 includes/class-settings.php:612
 msgid "Classic"
 msgstr ""
 
-#: includes/class-settings.php:129
+#: includes/class-settings.php:411
+msgid "Modern"
+msgstr ""
+
+#: includes/class-settings.php:433
+msgid "Elegant"
+msgstr ""
+
+#: includes/class-settings.php:456
+msgid "Minimal"
+msgstr ""
+
+#: includes/class-settings.php:480
+msgid "Bistro"
+msgstr ""
+
+#: includes/class-settings.php:500
+msgid "Midnight"
+msgstr ""
+
+#: includes/class-settings.php:585
+msgid "Inherit from theme"
+msgstr ""
+
+#: includes/class-settings.php:586
+msgid "System sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:587
+msgid "Classic serif"
+msgstr ""
+
+#: includes/class-settings.php:588
+msgid "Slab serif"
+msgstr ""
+
+#: includes/class-settings.php:589
+msgid "Humanist sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:590
+msgid "Geometric sans-serif"
+msgstr ""
+
+#: includes/class-settings.php:591
+msgid "Monospace"
+msgstr ""
+
+#: includes/class-settings.php:613
 msgid "Card"
 msgstr ""
 
-#: includes/class-settings.php:130
+#: includes/class-settings.php:614
 msgid "Two column"
 msgstr ""
 

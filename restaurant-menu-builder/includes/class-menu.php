@@ -243,8 +243,8 @@ class Menu {
 			return new \WP_Error( 'rmb_menu_missing', __( 'That menu no longer exists.', 'restaurant-menu-builder' ), array( 'status' => 404 ) );
 		}
 
-		$data   = array();
-		$format = array();
+		$data    = array();
+		$formats = array();
 
 		if ( array_key_exists( 'name', $input ) ) {
 			$name = sanitize_text_field( (string) $input['name'] );
@@ -253,29 +253,37 @@ class Menu {
 				return new \WP_Error( 'rmb_menu_name_required', __( 'Enter a menu name.', 'restaurant-menu-builder' ), array( 'status' => 400 ) );
 			}
 
-			$data['name'] = substr( $name, 0, 191 );
-			$format[]     = '%s';
+			$data['name']    = substr( $name, 0, 191 );
+			$formats['name'] = '%s';
 		}
 
 		if ( array_key_exists( 'slug', $input ) ) {
 			$slug         = '' !== (string) $input['slug'] ? (string) $input['slug'] : ( $data['name'] ?? $menu['name'] );
-			$data['slug'] = unique_slug( $slug, Database::table( Database::MENUS ), $id );
-			$format[]     = '%s';
+			$data['slug']    = unique_slug( $slug, Database::table( Database::MENUS ), $id );
+			$formats['slug'] = '%s';
 		}
 
 		if ( array_key_exists( 'status', $input ) ) {
-			$data['status'] = sanitize_status( $input['status'] );
-			$format[]       = '%s';
+			$data['status']    = sanitize_status( $input['status'] );
+			$formats['status'] = '%s';
 		}
 
 		if ( array_key_exists( 'settings', $input ) && is_array( $input['settings'] ) ) {
 			$settings         = self::merge_settings( self::sanitize_settings( $input['settings'], $menu['settings'] ) );
-			$data['settings'] = encode_json( $settings );
-			$format[]         = '%s';
+			$data['settings']    = encode_json( $settings );
+			$formats['settings'] = '%s';
 		}
 
 		if ( empty( $data ) ) {
 			return true;
+		}
+
+		// Formats are keyed by column and only flattened here, so a column set
+		// by more than one branch can never shift the remaining formats.
+		$format = array();
+
+		foreach ( array_keys( $data ) as $column ) {
+			$format[] = $formats[ $column ];
 		}
 
 		$updated = Database::update( Database::MENUS, $id, $data, $format );

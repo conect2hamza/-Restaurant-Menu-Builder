@@ -239,6 +239,8 @@ class Admin {
 			'settings'    => Settings::general(),
 			'style'       => Settings::style(),
 			'styleFields' => $this->style_fields(),
+			'styleGroups' => Settings::style_groups(),
+			'presets'     => $this->presets(),
 			'defaults'    => array(
 				'style'   => Settings::default_style(),
 				'general' => Settings::default_general(),
@@ -248,79 +250,60 @@ class Admin {
 	}
 
 	/**
-	 * Field definitions for the style editor.
+	 * Field definitions for the style editor, derived from the schema.
 	 *
-	 * @return array<int,array<string,string>>
+	 * @return array<int,array<string,mixed>>
 	 */
 	private function style_fields(): array {
-		return array(
-			array(
-				'key'   => 'color_primary',
-				'label' => __( 'Primary', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => __( 'Section titles and item names.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'color_accent',
-				'label' => __( 'Accent', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => __( 'Rules, focus outlines and highlights.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'color_text',
-				'label' => __( 'Text', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => '',
-			),
-			array(
-				'key'   => 'color_text_secondary',
-				'label' => __( 'Secondary text', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => __( 'Descriptions and price labels.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'color_background',
-				'label' => __( 'Background', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => '',
-			),
-			array(
-				'key'   => 'color_border',
-				'label' => __( 'Border', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => __( 'Category pills, cards and the dotted price leader.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'color_category_active',
-				'label' => __( 'Active category', 'restaurant-menu-builder' ),
-				'type'  => 'color',
-				'help'  => __( 'Fill of the selected category pill.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'size_heading',
-				'label' => __( 'Category heading size', 'restaurant-menu-builder' ),
-				'type'  => 'size',
-				'help'  => __( 'Use a CSS length, for example 30px or 2rem.', 'restaurant-menu-builder' ),
-			),
-			array(
-				'key'   => 'size_body',
-				'label' => __( 'Body size', 'restaurant-menu-builder' ),
-				'type'  => 'size',
-				'help'  => '',
-			),
-			array(
-				'key'   => 'size_category',
-				'label' => __( 'Category navigation size', 'restaurant-menu-builder' ),
-				'type'  => 'size',
-				'help'  => '',
-			),
-			array(
-				'key'   => 'size_price',
-				'label' => __( 'Price size', 'restaurant-menu-builder' ),
-				'type'  => 'size',
-				'help'  => '',
-			),
-		);
+		$fields = array();
+
+		foreach ( Settings::style_schema() as $key => $field ) {
+			$entry = array(
+				'key'   => (string) $key,
+				'label' => (string) ( $field['label'] ?? $key ),
+				'type'  => (string) ( $field['type'] ?? 'size' ),
+				'group' => (string) ( $field['group'] ?? 'colors' ),
+				'help'  => (string) ( $field['help'] ?? '' ),
+			);
+
+			if ( 'font' === $entry['type'] ) {
+				$entry['type']    = 'select';
+				$entry['choices'] = Settings::font_labels();
+			} elseif ( isset( $field['choices'] ) && is_array( $field['choices'] ) ) {
+				$entry['choices'] = array_map( 'strval', $field['choices'] );
+			}
+
+			$fields[] = $entry;
+		}
+
+		return $fields;
+	}
+
+	/**
+	 * Presets for the style editor, with the swatches shown on each button.
+	 *
+	 * @return array<int,array<string,mixed>>
+	 */
+	private function presets(): array {
+		$presets = array();
+
+		foreach ( Settings::presets() as $key => $preset ) {
+			$style = array_merge( Settings::default_style(), is_array( $preset['style'] ?? null ) ? $preset['style'] : array() );
+
+			$presets[] = array(
+				'key'      => (string) $key,
+				'label'    => (string) ( $preset['label'] ?? $key ),
+				'style'    => Settings::sanitize_style( $style, Settings::default_style() ),
+				'swatches' => array(
+					(string) $style['color_background'],
+					(string) $style['color_primary'],
+					(string) $style['color_accent'],
+					(string) $style['color_border'],
+				),
+			);
+		}
+
+		return $presets;
 	}
 
 	/* ---------------------------------------------------------------- Screens */
