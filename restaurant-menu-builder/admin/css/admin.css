@@ -6,7 +6,13 @@
  * retinted from one place.
  */
 
-.rmb-wrap {
+/* The modal and the toasts are appended to document.body, outside .rmb-wrap,
+   so the design tokens have to be defined on those roots as well. Without this
+   every var() inside them resolves to nothing: the primary button loses its
+   background and keeps its white label, which makes it look empty. */
+.rmb-wrap,
+.rmb-modal-backdrop,
+.rmb-notices {
 	--rmb-a-brand: #8b5cf6;
 	--rmb-a-brand-dark: #7c3aed;
 	--rmb-a-brand-soft: #f3efff;
@@ -27,13 +33,23 @@
 	--rmb-a-radius: 12px;
 	--rmb-a-radius-sm: 8px;
 	--rmb-a-shadow: 0 1px 2px rgba(24, 28, 40, 0.05), 0 8px 24px rgba(24, 28, 40, 0.05);
+}
 
+.rmb-wrap {
 	margin-right: 20px;
 	color: var(--rmb-a-ink);
 	font-size: 14px;
 }
 
-.rmb-wrap * {
+.rmb-modal-backdrop,
+.rmb-notices {
+	color: var(--rmb-a-ink);
+	font-size: 14px;
+}
+
+.rmb-wrap *,
+.rmb-modal-backdrop *,
+.rmb-notices * {
 	box-sizing: border-box;
 }
 

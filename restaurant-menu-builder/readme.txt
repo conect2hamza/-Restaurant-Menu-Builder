@@ -4,7 +4,7 @@ Tags: restaurant, menu, food menu, digital menu, cafe
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,13 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 
 == Changelog ==
 
+= 1.2.1 =
+* Fixed the primary button in dialogs showing as an empty white box. Dialogs
+  and toast notices are attached to the page body rather than inside the
+  plugin's own wrapper, so they were not picking up the colour palette: the
+  button lost its background but kept its white label. Toast notices were
+  invisible for the same reason.
+
 = 1.2.0 =
 * Customisation is now schema driven: 38 style settings, up from 12. A setting
   is described once in PHP and its default, sanitizer, CSS custom property and
@@ -171,6 +178,9 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 * Rendered menu caching with automatic invalidation.
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Fixes invisible dialog buttons and toast notices.
 
 = 1.2.0 =
 Adds the full customisation system and six presets. Existing styles are kept
