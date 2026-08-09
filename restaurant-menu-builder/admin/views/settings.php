@@ -21,7 +21,7 @@ $rmb_menus    = Menu::all( array( 'per_page' => 200 ) );
 $rmb_sizes    = get_intermediate_image_sizes();
 $rmb_sizes[]  = 'full';
 ?>
-<div class="wrap rmb-wrap" id="rmb-app" data-screen="settings">
+<div class="wrap rmb-wrap rmb-ui" id="rmb-app" data-screen="settings">
 	<?php
 	Admin::header(
 		__( 'Settings', 'restaurant-menu-builder' ),

@@ -23,7 +23,7 @@ if ( null === $rmb_menu ) {
 	return;
 }
 ?>
-<div class="wrap rmb-wrap rmb-editor" id="rmb-app" data-screen="editor" data-menu="<?php echo esc_attr( (string) $rmb_menu_id ); ?>">
+<div class="wrap rmb-wrap rmb-ui rmb-editor" id="rmb-app" data-screen="editor" data-menu="<?php echo esc_attr( (string) $rmb_menu_id ); ?>">
 	<div class="rmb-editor-bar">
 		<div class="rmb-editor-identity">
 			<a class="rmb-back" href="<?php echo esc_url( admin_url( 'admin.php?page=' . Admin::MENUS_SLUG ) ); ?>">

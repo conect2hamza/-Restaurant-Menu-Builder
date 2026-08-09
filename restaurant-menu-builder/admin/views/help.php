@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $rmb_menus = Menu::all( array( 'per_page' => 20 ) );
 ?>
-<div class="wrap rmb-wrap" id="rmb-app" data-screen="help">
+<div class="wrap rmb-wrap rmb-ui" id="rmb-app" data-screen="help">
 	<?php
 	Admin::header(
 		__( 'Help', 'restaurant-menu-builder' ),

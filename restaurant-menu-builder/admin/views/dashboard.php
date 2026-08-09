@@ -72,7 +72,7 @@ if ( null === $rmb_featured && ! empty( $rmb_recent['items'] ) ) {
 	$rmb_featured = $rmb_recent['items'][0];
 }
 ?>
-<div class="wrap rmb-wrap" id="rmb-app" data-screen="dashboard">
+<div class="wrap rmb-wrap rmb-ui" id="rmb-app" data-screen="dashboard">
 	<?php
 	Admin::header(
 		__( 'Restaurant Menu Builder', 'restaurant-menu-builder' ),

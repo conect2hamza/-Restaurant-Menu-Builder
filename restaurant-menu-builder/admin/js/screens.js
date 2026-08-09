@@ -425,12 +425,13 @@
 					el( 'span', { class: 'rmb-row-name', text: item.name } ),
 					item.description ? el( 'span', { class: 'rmb-row-sub', text: item.description } ) : null
 				] ),
-				priceText ? el( 'span', { class: 'rmb-row-price', text: priceText } ) : null,
-				item.status !== 'active'
-					? el( 'span', { class: 'rmb-status-chip', 'data-status': 'draft', text: statusLabel( item.status ) } )
-					: null,
-				moveButtons( item.name ),
-				el( 'span', { class: 'rmb-row-actions' }, [
+				el( 'span', { class: 'rmb-row-meta' }, [
+					priceText ? el( 'span', { class: 'rmb-row-price', text: priceText } ) : null,
+					item.status !== 'active'
+						? el( 'span', { class: 'rmb-status-chip', 'data-status': 'draft', text: statusLabel( item.status ) } )
+						: null,
+					moveButtons( item.name ),
+					el( 'span', { class: 'rmb-row-actions' }, [
 					actionButton( 'edit', __( 'Edit item', 'restaurant-menu-builder' ), function () {
 						itemForm( item, state.categories, category.id, refresh );
 					} ),
@@ -466,6 +467,7 @@
 						},
 						true
 					)
+					] )
 				] )
 			] );
 		}
@@ -517,11 +519,12 @@
 						)
 					} )
 				] ),
-				category.status !== 'active'
-					? el( 'span', { class: 'rmb-status-chip', 'data-status': 'draft', text: statusLabel( category.status ) } )
-					: null,
-				moveButtons( category.name ),
-				el( 'span', { class: 'rmb-row-actions' }, [
+				el( 'span', { class: 'rmb-row-meta' }, [
+					category.status !== 'active'
+						? el( 'span', { class: 'rmb-status-chip', 'data-status': 'draft', text: statusLabel( category.status ) } )
+						: null,
+					moveButtons( category.name ),
+					el( 'span', { class: 'rmb-row-actions' }, [
 					options.withItems
 						? el(
 								'button',
@@ -579,6 +582,7 @@
 						},
 						true
 					)
+					] )
 				] )
 			] );
 
@@ -1084,10 +1088,18 @@
 					} ),
 					el( 'div', { class: 'rmb-row-sub', text: '/' + menu.slug } )
 				] ),
-				el( 'td', {}, [ shortcodeButton ] ),
-				el( 'td', { text: String( menu.counts.items ) } ),
-				el( 'td', { text: String( menu.counts.categories ) } ),
-				el( 'td', {}, [ statusSelect ] ),
+				// data-label lets the stacked mobile layout name each cell, since the
+				// header row is hidden there.
+				el( 'td', { 'data-label': __( 'Shortcode', 'restaurant-menu-builder' ) }, [ shortcodeButton ] ),
+				el( 'td', {
+					'data-label': __( 'Items', 'restaurant-menu-builder' ),
+					text: String( menu.counts.items )
+				} ),
+				el( 'td', {
+					'data-label': __( 'Categories', 'restaurant-menu-builder' ),
+					text: String( menu.counts.categories )
+				} ),
+				el( 'td', { 'data-label': __( 'Status', 'restaurant-menu-builder' ) }, [ statusSelect ] ),
 				el( 'td', { class: 'rmb-cell-actions' }, [
 					el(
 						'a',

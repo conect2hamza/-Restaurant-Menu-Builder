@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** @var array<string,mixed> $rmb */
 $rmb_menu_id = (int) $rmb['menu_id'];
 ?>
-<div class="wrap rmb-wrap" id="rmb-app" data-screen="categories" data-menu="<?php echo esc_attr( (string) $rmb_menu_id ); ?>">
+<div class="wrap rmb-wrap rmb-ui" id="rmb-app" data-screen="categories" data-menu="<?php echo esc_attr( (string) $rmb_menu_id ); ?>">
 	<?php
 	Admin::header(
 		__( 'Categories', 'restaurant-menu-builder' ),

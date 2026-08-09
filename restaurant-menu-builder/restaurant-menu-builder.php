@@ -3,7 +3,7 @@
  * Plugin Name:       Restaurant Menu Builder
  * Plugin URI:        https://example.com/restaurant-menu-builder
  * Description:       Build, style and publish responsive restaurant menus from the WordPress dashboard. Menus, categories, items, images, multiple prices and a live preview — published with a shortcode.
- * Version:           1.2.1
+ * Version:           1.3.0
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Hamza Dezinr
@@ -28,7 +28,7 @@ if ( defined( 'RMB_VERSION' ) ) {
 	return;
 }
 
-define( 'RMB_VERSION', '1.2.1' );
+define( 'RMB_VERSION', '1.3.0' );
 define( 'RMB_DB_VERSION', '1.0.0' );
 define( 'RMB_FILE', __FILE__ );
 define( 'RMB_PATH', plugin_dir_path( __FILE__ ) );

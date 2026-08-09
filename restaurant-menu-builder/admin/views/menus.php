@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /** @var array<string,mixed> $rmb */
 $rmb_open_create = ! empty( $rmb['open_create'] );
 ?>
-<div class="wrap rmb-wrap" id="rmb-app" data-screen="menus" data-open-create="<?php echo $rmb_open_create ? '1' : '0'; ?>">
+<div class="wrap rmb-wrap rmb-ui" id="rmb-app" data-screen="menus" data-open-create="<?php echo $rmb_open_create ? '1' : '0'; ?>">
 	<?php
 	Admin::header(
 		__( 'Restaurant menus', 'restaurant-menu-builder' ),

@@ -117,7 +117,7 @@
 
 	function notify( message, type ) {
 		if ( ! noticeHost ) {
-			noticeHost = el( 'div', { class: 'rmb-notices', role: 'status', 'aria-live': 'polite' } );
+			noticeHost = el( 'div', { class: 'rmb-notices rmb-ui', role: 'status', 'aria-live': 'polite' } );
 			document.body.appendChild( noticeHost );
 		}
 
@@ -184,7 +184,7 @@
 			] )
 		] );
 
-		var backdrop = el( 'div', { class: 'rmb-modal-backdrop' }, [ dialog ] );
+		var backdrop = el( 'div', { class: 'rmb-modal-backdrop rmb-ui' }, [ dialog ] );
 
 		var closed = false;
 

@@ -4,7 +4,7 @@ Tags: restaurant, menu, food menu, digital menu, cafe
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,26 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 
 == Changelog ==
 
+= 1.3.0 =
+* Rebuilt the admin interface. The stylesheet is now scoped to a single class
+  that sits on the page wrapper and on the dialog and toast roots, and every
+  component rule carries that scope.
+* This fixes the interface losing its styling part way through a screen.
+  WordPress styles plugin markup through selectors such as input[type="text"],
+  select and .wrap h1, which outranked the plugin's single class rules: select
+  boxes were clipped to WordPress' own height and lost their arrow, text fields
+  reverted to the WordPress border and radius, and the page title lost its
+  weight.
+* Refreshed the visual design throughout: a fuller colour ramp, layered
+  shadows, consistent 38px controls, a redrawn select arrow matching the icon
+  pack, a spinner on loading states, hover and active states on every control
+  and a single focus ring style.
+* List rows group their price, status, reordering and action controls, so the
+  narrow editor sidebar moves the group to its own line instead of truncating
+  the item name to a few characters.
+* The stacked mobile table now labels each cell, since the header row is
+  hidden at that width.
+
 = 1.2.1 =
 * Fixed the primary button in dialogs showing as an empty white box. Dialogs
   and toast notices are attached to the page body rather than inside the
@@ -178,6 +198,10 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 * Rendered menu caching with automatic invalidation.
 
 == Upgrade Notice ==
+
+= 1.3.0 =
+Rebuilds the admin interface so WordPress' own form styling can no longer
+override it. No data or settings are affected.
 
 = 1.2.1 =
 Fixes invisible dialog buttons and toast notices.
