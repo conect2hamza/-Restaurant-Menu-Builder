@@ -190,6 +190,13 @@
 	padding-left: 36px;
 }
 
+/* Form controls are full width inside a field, but a toolbar lays them out in
+   a row, where width: 100% would push each onto its own line. */
+.rmb-ui .rmb-toolbar .rmb-input,
+.rmb-ui .rmb-toolbar .rmb-select {
+	width: auto;
+}
+
 /* -------------------------------------------------------------------- Panels */
 
 .rmb-ui .rmb-panel {
@@ -1878,7 +1885,9 @@
 	}
 
 	.rmb-ui .rmb-search,
-	.rmb-ui .rmb-search .rmb-input {
+	.rmb-ui .rmb-search .rmb-input,
+	.rmb-ui .rmb-toolbar .rmb-input,
+	.rmb-ui .rmb-toolbar .rmb-select {
 		min-width: 0;
 		width: 100%;
 	}

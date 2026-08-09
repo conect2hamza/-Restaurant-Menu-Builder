@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later license.
 msgid ""
 msgstr ""
-"Project-Id-Version: Restaurant Menu Builder 1.3.1\n"
+"Project-Id-Version: Restaurant Menu Builder 1.3.2\n"
 "Report-Msgid-Bugs-To: https://hamzadezinr.com/support\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,11 +33,11 @@ msgstr ""
 msgid "Add New"
 msgstr ""
 
-#: admin/class-admin.php:103 admin/class-admin.php:104 admin/js/screens.js:1099 admin/js/screens.js:1195 admin/views/categories.php:23 admin/views/menu-editor.php:61
+#: admin/class-admin.php:103 admin/class-admin.php:104 admin/js/screens.js:1087 admin/js/screens.js:1183 admin/views/categories.php:23 admin/views/menu-editor.php:61
 msgid "Categories"
 msgstr ""
 
-#: admin/class-admin.php:112 admin/class-admin.php:113 admin/js/screens.js:1095 admin/js/screens.js:1194
+#: admin/class-admin.php:112 admin/class-admin.php:113 admin/js/screens.js:1083 admin/js/screens.js:1182
 msgid "Items"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Menus"
 msgstr ""
 
-#: admin/class-admin.php:553 admin/js/screens.js:1192
+#: admin/class-admin.php:553 admin/js/screens.js:1180
 msgid "Menu"
 msgstr ""
 
@@ -153,11 +153,11 @@ msgstr ""
 msgid "Change image"
 msgstr ""
 
-#: admin/js/screens.js:33 admin/js/screens.js:129 admin/js/screens.js:323 admin/js/screens.js:1062 admin/js/screens.js:1319 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:44
+#: admin/js/screens.js:33 admin/js/screens.js:129 admin/js/screens.js:323 admin/js/screens.js:1050 admin/js/screens.js:1307 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:44
 msgid "Active"
 msgstr ""
 
-#: admin/js/screens.js:33 admin/js/screens.js:1063 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:45
+#: admin/js/screens.js:33 admin/js/screens.js:1051 admin/views/dashboard.php:123 admin/views/menu-editor.php:35 admin/views/menus.php:45
 msgid "Draft"
 msgstr ""
 
@@ -181,7 +181,7 @@ msgstr ""
 msgid "Shown under the category title"
 msgstr ""
 
-#: admin/js/screens.js:130 admin/js/screens.js:324 admin/js/screens.js:1320
+#: admin/js/screens.js:130 admin/js/screens.js:324 admin/js/screens.js:1308
 msgid "Draft — hidden from visitors"
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: admin/js/screens.js:150 admin/js/screens.js:341 admin/js/screens.js:1004 admin/js/screens.js:1102 admin/js/screens.js:1196 admin/js/screens.js:1352
+#: admin/js/screens.js:150 admin/js/screens.js:341 admin/js/screens.js:992 admin/js/screens.js:1090 admin/js/screens.js:1184 admin/js/screens.js:1340
 msgid "Status"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Add category"
 msgstr ""
 
-#: admin/js/screens.js:154 admin/js/screens.js:541
+#: admin/js/screens.js:154 admin/js/screens.js:529
 msgid "Edit category"
 msgstr ""
 
@@ -293,11 +293,11 @@ msgstr ""
 msgid "A short note beside the name, such as a portion size."
 msgstr ""
 
-#: admin/js/screens.js:347 admin/js/screens.js:348 admin/js/screens.js:538 admin/views/items.php:53
+#: admin/js/screens.js:347 admin/js/screens.js:348 admin/js/screens.js:526 admin/views/items.php:53
 msgid "Add item"
 msgstr ""
 
-#: admin/js/screens.js:347 admin/js/screens.js:435
+#: admin/js/screens.js:347 admin/js/screens.js:423
 msgid "Edit item"
 msgstr ""
 
@@ -305,253 +305,253 @@ msgstr ""
 msgid "Save item"
 msgstr ""
 
-#: admin/js/screens.js:354 includes/class-item.php:206 includes/class-item.php:276
+#: admin/js/screens.js:354 includes/class-item.php:256 includes/class-item.php:326
 msgid "Enter an item name."
 msgstr ""
 
-#: admin/js/screens.js:438
+#: admin/js/screens.js:426
 msgid "Duplicate item"
 msgstr ""
 
-#: admin/js/screens.js:448 admin/js/screens.js:453
+#: admin/js/screens.js:436 admin/js/screens.js:441
 msgid "Delete item"
 msgstr ""
 
-#: admin/js/screens.js:451
+#: admin/js/screens.js:439
 msgid "Delete this item?"
 msgstr ""
 
-#: admin/js/screens.js:452
+#: admin/js/screens.js:440
 msgid "“%s” will be removed from the menu."
 msgstr ""
 
-#: admin/js/screens.js:481 frontend/templates/category.php:50
+#: admin/js/screens.js:469 frontend/templates/category.php:50
 msgid "No items in this category yet."
 msgstr ""
 
 #. translators: %d: number of items.
-#: admin/js/screens.js:517
+#: admin/js/screens.js:505
 msgid "%d items"
 msgstr ""
 
-#: admin/js/screens.js:544
+#: admin/js/screens.js:532
 msgid "Duplicate category"
 msgstr ""
 
-#: admin/js/screens.js:554 admin/js/screens.js:568
+#: admin/js/screens.js:542 admin/js/screens.js:556
 msgid "Delete category"
 msgstr ""
 
-#: admin/js/screens.js:557
+#: admin/js/screens.js:545
 msgid "Delete this category?"
 msgstr ""
 
 #. translators: %s: category name.
-#: admin/js/screens.js:560
+#: admin/js/screens.js:548
 msgid "“%s” and everything inside it will be removed."
 msgstr ""
 
 #. translators: %d: number of items.
-#: admin/js/screens.js:565
+#: admin/js/screens.js:553
 msgid "%d items will be deleted with it."
 msgstr ""
 
-#: admin/js/screens.js:601
+#: admin/js/screens.js:589
 msgid "No categories yet"
 msgstr ""
 
-#: admin/js/screens.js:602
+#: admin/js/screens.js:590
 msgid "Categories are the sections of your menu, such as Starters or Drinks."
 msgstr ""
 
-#: admin/js/screens.js:603
+#: admin/js/screens.js:591
 msgid "Add your first category"
 msgstr ""
 
-#: admin/js/screens.js:667
+#: admin/js/screens.js:655
 msgid "Add a category before adding items."
 msgstr ""
 
 #. translators: %s: preset name.
-#: admin/js/screens.js:721
+#: admin/js/screens.js:709
 msgid "%s applied. Save to keep it."
 msgstr ""
 
-#: admin/js/screens.js:743
+#: admin/js/screens.js:731
 msgid "Start from a look"
 msgstr ""
 
-#: admin/js/screens.js:747
+#: admin/js/screens.js:735
 msgid "A preset fills every control below. Adjust anything afterwards."
 msgstr ""
 
-#: admin/js/screens.js:767
+#: admin/js/screens.js:755
 msgid "Use a hex colour such as #1f2933."
 msgstr ""
 
-#: admin/js/screens.js:990
+#: admin/js/screens.js:978
 msgid "Main menu"
 msgstr ""
 
-#: admin/js/screens.js:993
+#: admin/js/screens.js:981
 msgid "Draft — build it privately first"
 msgstr ""
 
-#: admin/js/screens.js:994
+#: admin/js/screens.js:982
 msgid "Active — visible wherever the shortcode is placed"
 msgstr ""
 
-#: admin/js/screens.js:1000
+#: admin/js/screens.js:988
 msgid "Add a menu"
 msgstr ""
 
-#: admin/js/screens.js:1001
+#: admin/js/screens.js:989
 msgid "Create menu"
 msgstr ""
 
-#: admin/js/screens.js:1003 admin/js/screens.js:1348
+#: admin/js/screens.js:991 admin/js/screens.js:1336
 msgid "Menu name"
 msgstr ""
 
-#: admin/js/screens.js:1010 includes/class-menu.php:198 includes/class-menu.php:253
+#: admin/js/screens.js:998 includes/class-menu.php:198 includes/class-menu.php:253
 msgid "Enter a menu name."
 msgstr ""
 
-#: admin/js/screens.js:1053 admin/views/dashboard.php:183
+#: admin/js/screens.js:1041 admin/views/dashboard.php:183
 msgid "Copy shortcode"
 msgstr ""
 
-#: admin/js/screens.js:1069
+#: admin/js/screens.js:1057
 msgid "Status of %s"
 msgstr ""
 
-#: admin/js/screens.js:1093 admin/js/screens.js:1193
+#: admin/js/screens.js:1081 admin/js/screens.js:1181
 msgid "Shortcode"
 msgstr ""
 
-#: admin/js/screens.js:1109
+#: admin/js/screens.js:1097
 msgid "Edit %s"
 msgstr ""
 
-#: admin/js/screens.js:1110
+#: admin/js/screens.js:1098
 msgid "Edit menu"
 msgstr ""
 
-#: admin/js/screens.js:1114
+#: admin/js/screens.js:1102
 msgid "Duplicate menu"
 msgstr ""
 
-#: admin/js/screens.js:1124 admin/js/screens.js:1139
+#: admin/js/screens.js:1112 admin/js/screens.js:1127
 msgid "Delete menu"
 msgstr ""
 
-#: admin/js/screens.js:1127
+#: admin/js/screens.js:1115
 msgid "Delete this menu?"
 msgstr ""
 
 #. translators: %s: menu name.
-#: admin/js/screens.js:1130
+#: admin/js/screens.js:1118
 msgid "“%s” will be removed permanently."
 msgstr ""
 
 #. translators: 1: category count, 2: item count.
-#: admin/js/screens.js:1135
+#: admin/js/screens.js:1123
 msgid "%1$d categories and %2$d items will be deleted with it."
 msgstr ""
 
-#: admin/js/screens.js:1178
+#: admin/js/screens.js:1166
 msgid "No menus found"
 msgstr ""
 
-#: admin/js/screens.js:1179
+#: admin/js/screens.js:1167
 msgid "Create a menu to start adding categories and dishes."
 msgstr ""
 
-#: admin/js/screens.js:1180 admin/views/menus.php:51
+#: admin/js/screens.js:1168 admin/views/menus.php:51
 msgid "Add new menu"
 msgstr ""
 
-#: admin/js/screens.js:1197
+#: admin/js/screens.js:1185
 msgid "Actions"
 msgstr ""
 
-#: admin/js/screens.js:1243
+#: admin/js/screens.js:1231
 msgid "Shortcode copied."
 msgstr ""
 
-#: admin/js/screens.js:1246 admin/js/screens.js:1252
+#: admin/js/screens.js:1234 admin/js/screens.js:1240
 msgid "Copy the shortcode manually: "
 msgstr ""
 
-#: admin/js/screens.js:1332 admin/views/settings.php:105
+#: admin/js/screens.js:1320 admin/views/settings.php:105
 msgid "Show category navigation"
 msgstr ""
 
-#: admin/js/screens.js:1333 admin/views/settings.php:106
+#: admin/js/screens.js:1321 admin/views/settings.php:106
 msgid "Show images"
 msgstr ""
 
-#: admin/js/screens.js:1334 admin/views/settings.php:107
+#: admin/js/screens.js:1322 admin/views/settings.php:107
 msgid "Show descriptions"
 msgstr ""
 
-#: admin/js/screens.js:1335 admin/views/settings.php:108
+#: admin/js/screens.js:1323 admin/views/settings.php:108
 msgid "Show prices"
 msgstr ""
 
-#: admin/js/screens.js:1350
+#: admin/js/screens.js:1338
 msgid "Slug"
 msgstr ""
 
-#: admin/js/screens.js:1350
+#: admin/js/screens.js:1338
 msgid "Used by [restaurant_menu slug=\"…\"]."
 msgstr ""
 
-#: admin/js/screens.js:1353 admin/views/settings.php:93 includes/class-settings.php:399
+#: admin/js/screens.js:1341 admin/views/settings.php:93 includes/class-settings.php:399
 msgid "Layout"
 msgstr ""
 
-#: admin/js/screens.js:1360
+#: admin/js/screens.js:1348
 msgid "Custom CSS for this menu"
 msgstr ""
 
-#: admin/js/screens.js:1362
+#: admin/js/screens.js:1350
 msgid "Applies to this menu only."
 msgstr ""
 
-#: admin/js/screens.js:1371
+#: admin/js/screens.js:1359
 msgid "Use the global style from Restaurant Menu → Style"
 msgstr ""
 
-#: admin/js/screens.js:1459
+#: admin/js/screens.js:1447
 msgid "Show preview"
 msgstr ""
 
-#: admin/js/screens.js:1460 admin/views/menu-editor.php:43
+#: admin/js/screens.js:1448 admin/views/menu-editor.php:43
 msgid "Hide preview"
 msgstr ""
 
-#: admin/js/screens.js:1607
+#: admin/js/screens.js:1595
 msgid "Restore the default style?"
 msgstr ""
 
-#: admin/js/screens.js:1608
+#: admin/js/screens.js:1596
 msgid "Colours, sizes and the font go back to the plugin defaults."
 msgstr ""
 
-#: admin/js/screens.js:1609 admin/js/screens.js:1675 admin/views/style.php:32
+#: admin/js/screens.js:1597 admin/js/screens.js:1663 admin/views/style.php:32
 msgid "Restore defaults"
 msgstr ""
 
-#: admin/js/screens.js:1672
+#: admin/js/screens.js:1660
 msgid "Restore default settings?"
 msgstr ""
 
-#: admin/js/screens.js:1673
+#: admin/js/screens.js:1661
 msgid "Currency, display options and custom CSS go back to their defaults."
 msgstr ""
 
-#: admin/js/screens.js:1674
+#: admin/js/screens.js:1662
 msgid "Your menus, categories and items are not touched."
 msgstr ""
 
@@ -1058,7 +1058,7 @@ msgstr ""
 msgid "Unable to duplicate the category. Please try again."
 msgstr ""
 
-#: includes/class-category.php:314 includes/class-item.php:431
+#: includes/class-category.php:314 includes/class-item.php:481
 msgid "Unable to save the new order. Please reload the page and try again."
 msgstr ""
 
@@ -1475,23 +1475,28 @@ msgstr ""
 msgid "Plugin activation stopped"
 msgstr ""
 
-#: includes/class-item.php:200 includes/class-item.php:259
+#. translators: 1: sale price, 2: original price.
+#: includes/class-item.php:134
+msgid "%1$s (was %2$s)"
+msgstr ""
+
+#: includes/class-item.php:250 includes/class-item.php:309
 msgid "Choose a category for this item."
 msgstr ""
 
-#: includes/class-item.php:230 includes/class-item.php:332
+#: includes/class-item.php:280 includes/class-item.php:382
 msgid "Unable to save the item. Please try again."
 msgstr ""
 
-#: includes/class-item.php:249 includes/class-item.php:348 includes/class-item.php:370
+#: includes/class-item.php:299 includes/class-item.php:398 includes/class-item.php:420
 msgid "That item no longer exists."
 msgstr ""
 
-#: includes/class-item.php:352
+#: includes/class-item.php:402
 msgid "Unable to delete the item. Please try again."
 msgstr ""
 
-#: includes/class-item.php:376
+#: includes/class-item.php:426
 msgid "Unable to duplicate the item. Please try again."
 msgstr ""
 

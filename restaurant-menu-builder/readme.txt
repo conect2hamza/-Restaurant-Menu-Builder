@@ -4,7 +4,7 @@ Tags: restaurant, menu, food menu, digital menu, cafe
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,14 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 
 == Changelog ==
 
+= 1.3.2 =
+* Prices in the admin lists are shown in your currency. They previously
+  appeared as raw column values such as "11.99 (14.5)"; they now read
+  "$11.99 (was $14.50)" and "Small $17.00 · Large $25.00".
+* The search box and the status filter sit on one row again. Form controls are
+  full width inside a field, which was pushing each toolbar control onto its
+  own line.
+
 = 1.3.1 =
 * The category bar now wraps onto as many lines as it needs, so every category
   is visible on a phone or tablet. It previously sat on one line that scrolled
@@ -209,6 +217,9 @@ No. There are no remote APIs, no licensing server, no fonts loaded from a CDN an
 * Rendered menu caching with automatic invalidation.
 
 == Upgrade Notice ==
+
+= 1.3.2 =
+Formats prices in the admin lists and repairs the toolbar layout.
 
 = 1.3.1 =
 The category bar now wraps so every category shows on small screens. Existing

@@ -401,20 +401,8 @@
 		}
 
 		function itemRow( item, category ) {
-			var priceText = '';
-
-			if ( item.price_type === 'multiple' && item.variations.length ) {
-				priceText = item.variations
-					.map( function ( variation ) {
-						var value = variation.sale_price === null ? variation.price : variation.sale_price;
-						return ( variation.label ? variation.label + ' ' : '' ) + ( value === null ? '—' : value );
-					} )
-					.join( ' · ' );
-			} else if ( item.sale_price !== null ) {
-				priceText = item.sale_price + ' (' + item.price + ')';
-			} else if ( item.price !== null ) {
-				priceText = String( item.price );
-			}
+			// Formatted server side in the site currency.
+			var priceText = item.price_display || '';
 
 			return el( 'li', { class: 'rmb-row rmb-row-item', 'data-sort-id': item.id }, [
 				dragHandle(),

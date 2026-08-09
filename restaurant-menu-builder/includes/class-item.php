@@ -30,6 +30,10 @@ class Item {
 		$settings   = decode_json( $row['settings'] ?? '' );
 		$image_id   = (int) ( $row['image_id'] ?? 0 );
 		$price_type = 'multiple' === ( $row['price_type'] ?? 'single' ) ? 'multiple' : 'single';
+		$variations = self::prepare_variations( $settings['variations'] ?? array() );
+
+		$price      = isset( $row['price'] ) && null !== $row['price'] ? (float) $row['price'] : null;
+		$sale_price = isset( $row['sale_price'] ) && null !== $row['sale_price'] ? (float) $row['sale_price'] : null;
 
 		return array(
 			'id'          => (int) ( $row['id'] ?? 0 ),
@@ -39,10 +43,13 @@ class Item {
 			'description' => (string) ( $row['description'] ?? '' ),
 			'image_id'    => $image_id,
 			'image'       => $image_id > 0 ? wp_get_attachment_image_url( $image_id, 'thumbnail' ) : '',
-			'price'       => isset( $row['price'] ) && null !== $row['price'] ? (float) $row['price'] : null,
-			'sale_price'  => isset( $row['sale_price'] ) && null !== $row['sale_price'] ? (float) $row['sale_price'] : null,
+			'price'       => $price,
+			'sale_price'  => $sale_price,
 			'price_type'  => $price_type,
-			'variations'  => self::prepare_variations( $settings['variations'] ?? array() ),
+			// A plain text summary in the site currency, so admin lists do not
+			// have to render raw column values such as "11.99 (14.5)".
+			'price_display' => self::price_summary( $price_type, $price, $sale_price, $variations ),
+			'variations'  => $variations,
 			'badge'       => isset( $settings['badge'] ) ? (string) $settings['badge'] : '',
 			'sort_order'  => (int) ( $row['sort_order'] ?? 0 ),
 			'status'      => sanitize_status( $row['status'] ?? 'active' ),
@@ -88,6 +95,49 @@ class Item {
 		}
 
 		return $variations;
+	}
+
+	/**
+	 * Human readable price for admin lists, in the configured currency.
+	 *
+	 * @param string                        $price_type single or multiple.
+	 * @param float|null                    $price      Regular price.
+	 * @param float|null                    $sale_price Sale price.
+	 * @param array<int,array<string,mixed>> $variations Prepared variations.
+	 * @return string
+	 */
+	private static function price_summary( string $price_type, ?float $price, ?float $sale_price, array $variations ): string {
+		if ( 'multiple' === $price_type && ! empty( $variations ) ) {
+			$parts = array();
+
+			foreach ( $variations as $variation ) {
+				$amount = null === $variation['sale_price'] ? $variation['price'] : $variation['sale_price'];
+				$value  = Currency::format( $amount );
+
+				if ( '' === $value ) {
+					continue;
+				}
+
+				$label   = (string) $variation['label'];
+				$parts[] = '' !== $label ? $label . ' ' . $value : $value;
+			}
+
+			return implode( ' · ', $parts );
+		}
+
+		if ( null !== $sale_price ) {
+			$was = Currency::format( $price );
+			$now = Currency::format( $sale_price );
+
+			if ( '' !== $was ) {
+				/* translators: 1: sale price, 2: original price. */
+				return sprintf( __( '%1$s (was %2$s)', 'restaurant-menu-builder' ), $now, $was );
+			}
+
+			return $now;
+		}
+
+		return Currency::format( $price );
 	}
 
 	/**
